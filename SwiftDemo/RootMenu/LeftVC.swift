@@ -49,9 +49,9 @@ class LeftVC: BaseVC ,UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "UITableViewCell", for: indexPath)
-        let value = self.data[indexPath.row]
+        let model = self.data[indexPath.row] as! CourseModel
         
-        cell.textLabel?.text = value as? String
+        cell.textLabel?.text = model.title
         return cell;
         
     }
