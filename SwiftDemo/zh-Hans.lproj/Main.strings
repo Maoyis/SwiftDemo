@@ -1,0 +1,12 @@
+
+/* Class = "UITabBarItem"; title = "初学"; ObjectID = "UqZ-yf-4fx"; */
+"UqZ-yf-4fx.title" = "初学";
+
+/* Class = "UITextView"; text = "1"; ObjectID = "Z6V-ut-C6r"; */
+"Z6V-ut-C6r.text" = "1";
+
+/* Class = "UITabBarItem"; title = "精品库"; ObjectID = "sGm-O9-OMn"; */
+"sGm-O9-OMn.title" = "精品库";
+
+/* Class = "UITabBarItem"; title = "进阶"; ObjectID = "tQv-T8-OKw"; */
+"tQv-T8-OKw.title" = "进阶";
