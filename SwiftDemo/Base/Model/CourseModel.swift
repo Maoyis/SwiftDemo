@@ -38,9 +38,9 @@ class CourseModel: NSObject {
         case CourseType.Begnner:
             return self.getBegnenrCourses()
         case CourseType.Advanced:
-            return self.getBegnenrCourses()
+            return self.getAdvanceCourses()
         case CourseType.Library:
-            return self.getBegnenrCourses()
+            return self.getLibraryCourses()
 
         }
     }
@@ -48,7 +48,21 @@ class CourseModel: NSObject {
     class func getBegnenrCourses() -> Array<Any> {
         return [
         CourseModel.init(withTitle: "Swfit简介", identy: "BriefVC", brief: "23456789"),
-        CourseModel.init(withTitle: "Swfit简介1", identy: "BriefVC", brief: "23456789"),
+        CourseModel.init(withTitle: "基础部分", identy: "BriefVC", brief: "23456789"),
+        ]
+    }
+    
+    class func getAdvanceCourses() -> Array<Any> {
+        return [
+            CourseModel.init(withTitle: "Swfit简介", identy: "BriefVC", brief: "23456789"),
+            CourseModel.init(withTitle: "基础部分", identy: "BriefVC", brief: "23456789"),
+        ]
+    }
+    
+    class func getLibraryCourses() -> Array<Any> {
+        return [
+            CourseModel.init(withTitle: "Swfit简介", identy: "BriefVC", brief: "23456789"),
+            CourseModel.init(withTitle: "基础部分", identy: "BriefVC", brief: "23456789"),
         ]
     }
     
