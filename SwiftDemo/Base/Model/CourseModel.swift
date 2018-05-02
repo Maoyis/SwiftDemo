@@ -14,7 +14,9 @@ enum CourseType {
     case Library
   
 }
-
+enum <#name#> {
+    case <#case#>
+}
 
 class CourseModel: NSObject {
     /**简介*/
@@ -23,6 +25,8 @@ class CourseModel: NSObject {
     @objc var title:String            = ""
     /**storyboard上标识*/
     @objc var identy:String           = ""
+    /**显示类型*/
+    @objc var type:Int                = 0
     /**数据*/
     @objc var data:[CourseModel]      = []
 
