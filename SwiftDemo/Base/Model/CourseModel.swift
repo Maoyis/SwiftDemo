@@ -7,15 +7,15 @@
 //
 
 import UIKit
-
+import YYKit
 enum CourseType {
     case Begnner
     case Advanced
     case Library
   
 }
-enum <#name#> {
-    case <#case#>
+enum ShowType {
+    case xib
 }
 
 class CourseModel: NSObject {
@@ -35,6 +35,34 @@ class CourseModel: NSObject {
         self.title    = title
         self.brief    = brief
         self.identy   = identy
+    }
+    
+    class func getCourseData(withFile file:String) -> Array<Dictionary<String, Any>> {
+        let path = Bundle.main.path(forResource: file, ofType: "plist")
+        let data = NSArray(contentsOfFile: path!) as! Array<Dictionary<String, Any>>
+        var modelData:Array<Dictionary<String, Any>> = []
+        for dic in data {
+            let key   = dic.first?.key
+            let value = dic.first?.value as! Array<Dictionary<String, Any>>
+            
+//            for dict in value {
+//                let model = CourseModel()
+//                status.yy_modelSet(with: dict)
+//                array.append(status)
+//            }
+            
+            
+            let json = self.jsonData(obj: value as Any)
+            let strJson = NSString(data: json, encoding: String.Encoding.utf8.rawValue)
+            let models = NSArray.modelArray(with: self.classForCoder(), json:json)
+            modelData.append([key!:models as Any])
+        }
+        return data
+    }
+    
+    class func jsonData(obj:Any) ->  Data{
+         let jsonData = try? JSONSerialization.data(withJSONObject:obj, options: JSONSerialization.WritingOptions.prettyPrinted)
+        return jsonData!
     }
     
     class func getCourseData(withType type:CourseType) -> Array<Any> {

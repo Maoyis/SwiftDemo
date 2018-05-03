@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4256CEAC209AE35200EF1595 /* beginner.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4256CEAB209AE35200EF1595 /* beginner.plist */; };
 		42B357CA209410F400474893 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B357C9209410F400474893 /* AppDelegate.swift */; };
 		42B357CF209410F400474893 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 42B357CD209410F400474893 /* Main.storyboard */; };
 		42B357D1209410F900474893 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 42B357D0209410F900474893 /* Assets.xcassets */; };
@@ -46,6 +47,7 @@
 
 /* Begin PBXFileReference section */
 		02DD2DE39D9C3058C9484465 /* Pods_SwiftDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4256CEAB209AE35200EF1595 /* beginner.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = beginner.plist; sourceTree = "<group>"; };
 		42B357C6209410F400474893 /* SwiftDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		42B357C9209410F400474893 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		42B357CE209410F400474893 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -361,6 +363,7 @@
 			isa = PBXGroup;
 			children = (
 				42B35831209466DF00474893 /* Localizable.strings */,
+				4256CEAB209AE35200EF1595 /* beginner.plist */,
 			);
 			path = "Support File";
 			sourceTree = "<group>";
@@ -483,6 +486,7 @@
 			files = (
 				42B357D4209410F900474893 /* LaunchScreen.storyboard in Resources */,
 				42B3582F209466DF00474893 /* Localizable.strings in Resources */,
+				4256CEAC209AE35200EF1595 /* beginner.plist in Resources */,
 				42B357D1209410F900474893 /* Assets.xcassets in Resources */,
 				42B357CF209410F400474893 /* Main.storyboard in Resources */,
 			);

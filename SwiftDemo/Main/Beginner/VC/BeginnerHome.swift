@@ -12,6 +12,9 @@ class BeginnerHome: BaseVC {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        let arr = CourseModel.getCourseData(withFile: "beginner")
+        print("\(arr)")
+        
     }
 
     override func didReceiveMemoryWarning() {

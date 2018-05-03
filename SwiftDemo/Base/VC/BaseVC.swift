@@ -27,35 +27,43 @@ class BaseVC: UIViewController {
         
         if (self.navigationController != nil)
             && (self.navigationController?.viewControllers.count)!>1 {
-            /* 设置导航栏上面的内容 */
-            let backBtn = UIButton.init(type: UIButtonType.custom)
-            backBtn.addTarget(self, action: #selector(back), for: UIControlEvents.touchUpInside)
-            // 设置图片 设置尺寸--》等于当前背景图片的尺寸。
-            backBtn.setImage(UIImage.init(named: "left_back_black"), for: UIControlState.normal)
-            backBtn.frame =  CGRect(x: 0, y: 0, width: 20, height: 30)
-            backBtn.imageEdgeInsets = UIEdgeInsetsMake(0, -20, 0, 0);
-            //适配xocde9 xcode9导航栏按钮使用自约束
-            let systemVersion = UIDevice.current.systemVersion
-            if  Double(systemVersion)! > 9.0  {
-                let wc = backBtn.widthAnchor.constraint(equalToConstant: backBtn.frame.size.width)
-                wc.isActive = true;
-                let hc = backBtn.heightAnchor.constraint(equalToConstant: backBtn.frame.size.height)
-                
-                hc.isActive = true;
-            }
             
-            let backItem = UIBarButtonItem.init(customView: backBtn)
+            let backItem = self.getCustumBtnBar(withImage: "left_back_black", action: #selector(back))
             items.append(backItem)
             
         }else{
-            let menItem = UIBarButtonItem.init(title: "菜单", style: UIBarButtonItemStyle.plain, target: self, action: #selector(menuSwitch))
             
+            let menItem = self.getCustumBtnBar(withImage: "icon_threeline", action: #selector(menuSwitch))
             items.append(menItem)
         }
         
         self.navigationItem.leftBarButtonItems = items
         
     }
+    
+    
+    func getCustumBtnBar(withImage image:String, action:Selector) -> UIBarButtonItem {
+        /* 设置导航栏上面的内容 */
+        let cstB = UIButton.init(type: UIButtonType.custom)
+        cstB.addTarget(self, action: action, for: UIControlEvents.touchUpInside)
+        // 设置图片 设置尺寸--》等于当前背景图片的尺寸。
+        cstB.setImage(UIImage.init(named: image), for: UIControlState.normal)
+        cstB.frame =  CGRect(x: 0, y: 0, width: 30, height: 30)
+        //cstB.imageEdgeInsets = UIEdgeInsetsMake(0, -30, 0, 0);
+        //适配xocde9 xcode9导航栏按钮使用自约束
+        let systemVersion = UIDevice.current.systemVersion
+        if  Double(systemVersion)! > 9.0  {
+            let wc = cstB.widthAnchor.constraint(equalToConstant: cstB.frame.size.width)
+            wc.isActive = true;
+            let hc = cstB.heightAnchor.constraint(equalToConstant: cstB.frame.size.height)
+            
+            hc.isActive = true;
+        }
+        
+        let item = UIBarButtonItem.init(customView: cstB)
+        return item
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
