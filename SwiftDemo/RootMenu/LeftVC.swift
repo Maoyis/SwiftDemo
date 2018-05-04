@@ -10,7 +10,7 @@ import UIKit
 
 class LeftVC: BaseVC ,UITableViewDelegate, UITableViewDataSource{
  
-    lazy var data:[Any] = []
+    lazy var data:[Dictionary<String:Array<C>>] = []
     lazy var table: UITableView = {
         let table = UITableView.init(frame: self.view.bounds)
         table.tableFooterView = UIView.init()
@@ -40,9 +40,16 @@ class LeftVC: BaseVC ,UITableViewDelegate, UITableViewDataSource{
         self.table.register(UITableViewCell.classForCoder(), forCellReuseIdentifier: "UITableViewCell")
     }
 
-
+    
 //MARK:tabledelegate
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return self.data.count
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        let dic = self.data[section]
+        let arr  = dic
         return self.data.count
     }
     

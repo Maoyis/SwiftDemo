@@ -82,17 +82,11 @@ class CourseModel: NSObject {
     }
     
     class func getAdvanceCourses() -> Array<Dictionary<String, Array<CourseModel>>> {
-        return [
-            CourseModel.init(withTitle: "Swfit简介", identy: "BriefVC", brief: "23456789"),
-            CourseModel.init(withTitle: "基础部分", identy: "BriefVC", brief: "23456789"),
-        ]
+        return self.getCourseData(withFile: "advance")
     }
     
     class func getLibraryCourses() -> Array<Dictionary<String, Array<CourseModel>>> {
-        return [
-            CourseModel.init(withTitle: "Swfit简介", identy: "BriefVC", brief: "23456789"),
-            CourseModel.init(withTitle: "基础部分", identy: "BriefVC", brief: "23456789"),
-        ]
+        return self.getCourseData(withFile: "library")
     }
     
 }
