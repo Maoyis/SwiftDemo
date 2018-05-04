@@ -29,7 +29,11 @@ class CourseModel: NSObject {
     @objc var type:Int                = 0
     /**数据*/
     @objc var data:[CourseModel]      = []
-
+    override init() {
+        super.init()
+    }
+    
+    
     init(withTitle title:String, identy:String, brief:String) {
         super.init()
         self.title    = title
@@ -37,27 +41,22 @@ class CourseModel: NSObject {
         self.identy   = identy
     }
     
-    class func getCourseData(withFile file:String) -> Array<Dictionary<String, Any>> {
+    /// 通过本地plist文件加载对应数据
+    ///
+    /// - Parameter file: 文件名
+    /// - Returns: 所需数据
+    class func getCourseData(withFile file:String) -> Array<Dictionary<String, Array<CourseModel>>> {
         let path = Bundle.main.path(forResource: file, ofType: "plist")
         let data = NSArray(contentsOfFile: path!) as! Array<Dictionary<String, Any>>
-        var modelData:Array<Dictionary<String, Any>> = []
+        var modelData:Array<Dictionary<String, Array<CourseModel>>> = []
         for dic in data {
             let key   = dic.first?.key
             let value = dic.first?.value as! Array<Dictionary<String, Any>>
-            
-//            for dict in value {
-//                let model = CourseModel()
-//                status.yy_modelSet(with: dict)
-//                array.append(status)
-//            }
-            
-            
             let json = self.jsonData(obj: value as Any)
-            let strJson = NSString(data: json, encoding: String.Encoding.utf8.rawValue)
-            let models = NSArray.modelArray(with: self.classForCoder(), json:json)
-            modelData.append([key!:models as Any])
+            let models = NSArray.modelArray(with: self.classForCoder(), json:json) as! Array<CourseModel>
+            modelData.append([key!:models])
         }
-        return data
+        return modelData
     }
     
     class func jsonData(obj:Any) ->  Data{
@@ -65,7 +64,7 @@ class CourseModel: NSObject {
         return jsonData!
     }
     
-    class func getCourseData(withType type:CourseType) -> Array<Any> {
+    class func getCourseData(withType type:CourseType) -> Array<Dictionary<String, Array<CourseModel>>> {
         switch type {
         case CourseType.Begnner:
             return self.getBegnenrCourses()
@@ -77,21 +76,19 @@ class CourseModel: NSObject {
         }
     }
     
-    class func getBegnenrCourses() -> Array<Any> {
-        return [
-        CourseModel.init(withTitle: "Swfit简介", identy: "BriefVC", brief: "23456789"),
-        CourseModel.init(withTitle: "基础部分", identy: "BriefVC", brief: "23456789"),
-        ]
+    class func getBegnenrCourses() -> Array<Dictionary<String, Array<CourseModel>>> {
+        
+        return self.getCourseData(withFile: "beginner")
     }
     
-    class func getAdvanceCourses() -> Array<Any> {
+    class func getAdvanceCourses() -> Array<Dictionary<String, Array<CourseModel>>> {
         return [
             CourseModel.init(withTitle: "Swfit简介", identy: "BriefVC", brief: "23456789"),
             CourseModel.init(withTitle: "基础部分", identy: "BriefVC", brief: "23456789"),
         ]
     }
     
-    class func getLibraryCourses() -> Array<Any> {
+    class func getLibraryCourses() -> Array<Dictionary<String, Array<CourseModel>>> {
         return [
             CourseModel.init(withTitle: "Swfit简介", identy: "BriefVC", brief: "23456789"),
             CourseModel.init(withTitle: "基础部分", identy: "BriefVC", brief: "23456789"),
