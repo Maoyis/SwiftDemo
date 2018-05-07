@@ -10,10 +10,12 @@ import UIKit
 
 class LeftVC: BaseVC ,UITableViewDelegate, UITableViewDataSource{
  
-    lazy var data:[Dictionary<String:Array<C>>] = []
+    var data:Array<Dictionary<String, Array<CourseModel>>> = []
+    
     lazy var table: UITableView = {
-        let table = UITableView.init(frame: self.view.bounds)
+        let table = UITableView.init(frame: self.view.bounds, style: UITableViewStyle.grouped)
         table.tableFooterView = UIView.init()
+        table.tableHeaderView = UIView.init(frame: CGRect(x:0, y:0, width:self.view.bounds.size.width, height:0.1))
         table.delegate   = self;
         table.dataSource = self;
         
@@ -49,14 +51,34 @@ class LeftVC: BaseVC ,UITableViewDelegate, UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         let dic = self.data[section]
-        let arr  = dic
-        return self.data.count
+        let arr  = dic.first?.value
+        return (arr?.count)!
     }
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let label = UILabel.init(frame:CGRect(x:0, y:0, width:self.view.bounds.size.width, height:20));
+        label.font = UIFont.systemFont(ofSize: 12)
+        let data = self.data[section]
+        label.text = "  " + (data.first?.key)!
+        return label;
     
+    }
+    func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
+        return nil;
+    }
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 20
+    }
+    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        return 0.1
+    }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "UITableViewCell", for: indexPath)
-        let model = self.data[indexPath.row] as! CourseModel
+        
+        let dic = self.data[indexPath.section]
+        let arr  = dic.first?.value
+        
+        let model = arr![indexPath.row]
         
         cell.textLabel?.text = model.title
         return cell;

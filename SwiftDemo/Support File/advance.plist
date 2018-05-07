@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>简介</key>
+		<array>
+			<dict>
+				<key>title</key>
+				<string>swift简介</string>
+			</dict>
+		</array>
+	</dict>
+	<dict>
+		<key>语法</key>
+		<array>
+			<dict>
+				<key>title</key>
+				<string>常亮与变量</string>
+			</dict>
+		</array>
+	</dict>
+</array>
+</plist>
