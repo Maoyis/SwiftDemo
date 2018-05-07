@@ -39,6 +39,9 @@ class BaseVC: UIViewController {
         
         self.navigationItem.leftBarButtonItems = items
         
+        
+        let webItem = UIBarButtonItem.init(title: "官网", style: UIBarButtonItemStyle.plain, target: self, action: #selector(gotoAppleWeb))
+        self.navigationItem.rightBarButtonItem = webItem
     }
     
     
@@ -98,6 +101,13 @@ class BaseVC: UIViewController {
             root.openLeft()
         }
         
+    }
+    @objc func gotoAppleWeb() -> Void {
+        let appleWeb = "https://developer.apple.com/library/content/documentation/Swift/Conceptual/Swift_Programming_Language/TheBasics.html#//apple_ref/doc/uid/TP40014097-CH5-ID309"
+        let url = URL.init(string: appleWeb)
+        UIApplication.shared.open(url!, options: [:]) { (flag) in
+            print("打开官网")
+        }
     }
     @objc func back() -> Void {
         if (self.navigationController != nil) {
