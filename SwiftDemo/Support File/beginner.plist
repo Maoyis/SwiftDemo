@@ -8,6 +8,10 @@
 			<dict>
 				<key>title</key>
 				<string>swift简介</string>
+				<key>type</key>
+				<integer>2</integer>
+				<key>data</key>
+				<string>http://www.swift51.com/swift4.0/chapter1/01_swift.html</string>
 			</dict>
 		</array>
 	</dict>
@@ -17,6 +21,23 @@
 			<dict>
 				<key>title</key>
 				<string>常亮与变量</string>
+				<key>type</key>
+				<integer>2</integer>
+				<key>data</key>
+				<string></string>
+			</dict>
+		</array>
+	</dict>
+	<dict>
+		<key>UI</key>
+		<array>
+			<dict>
+				<key>title</key>
+				<string>UILabel</string>
+				<key>type</key>
+				<integer>1</integer>
+				<key>data</key>
+				<string>QXLabelVC</string>
 			</dict>
 		</array>
 	</dict>

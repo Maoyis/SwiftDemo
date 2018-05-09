@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		4256CEAC209AE35200EF1595 /* beginner.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4256CEAB209AE35200EF1595 /* beginner.plist */; };
+		42ABB7AA20A2F47000F9D7FE /* TextVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42ABB7A820A2F47000F9D7FE /* TextVC.swift */; };
+		42ABB7AB20A2F47000F9D7FE /* TextVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 42ABB7A920A2F47000F9D7FE /* TextVC.xib */; };
+		42ABB7AD20A2F49800F9D7FE /* QXWebVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42ABB7AC20A2F49800F9D7FE /* QXWebVC.swift */; };
 		42B357CA209410F400474893 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B357C9209410F400474893 /* AppDelegate.swift */; };
 		42B357CF209410F400474893 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 42B357CD209410F400474893 /* Main.storyboard */; };
 		42B357D1209410F900474893 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 42B357D0209410F900474893 /* Assets.xcassets */; };
@@ -50,6 +53,9 @@
 /* Begin PBXFileReference section */
 		02DD2DE39D9C3058C9484465 /* Pods_SwiftDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4256CEAB209AE35200EF1595 /* beginner.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = beginner.plist; sourceTree = "<group>"; };
+		42ABB7A820A2F47000F9D7FE /* TextVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextVC.swift; sourceTree = "<group>"; };
+		42ABB7A920A2F47000F9D7FE /* TextVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TextVC.xib; sourceTree = "<group>"; };
+		42ABB7AC20A2F49800F9D7FE /* QXWebVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QXWebVC.swift; sourceTree = "<group>"; };
 		42B357C6209410F400474893 /* SwiftDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		42B357C9209410F400474893 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		42B357CE209410F400474893 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -189,6 +195,9 @@
 				42B358042094196200474893 /* BaseNav.swift */,
 				42B35806209419B600474893 /* BaseTabBarVC.swift */,
 				42B3580A20941B1600474893 /* BaseVC.swift */,
+				42ABB7A820A2F47000F9D7FE /* TextVC.swift */,
+				42ABB7A920A2F47000F9D7FE /* TextVC.xib */,
+				42ABB7AC20A2F49800F9D7FE /* QXWebVC.swift */,
 			);
 			path = VC;
 			sourceTree = "<group>";
@@ -491,6 +500,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				42FAADE920A023BF00D5EADB /* library.plist in Resources */,
+				42ABB7AB20A2F47000F9D7FE /* TextVC.xib in Resources */,
 				42B357D4209410F900474893 /* LaunchScreen.storyboard in Resources */,
 				42B3582F209466DF00474893 /* Localizable.strings in Resources */,
 				4256CEAC209AE35200EF1595 /* beginner.plist in Resources */,
@@ -567,10 +577,12 @@
 				42B35807209419B600474893 /* BaseTabBarVC.swift in Sources */,
 				42B35820209420D600474893 /* LeftVC.swift in Sources */,
 				42B358052094196200474893 /* BaseNav.swift in Sources */,
+				42ABB7AA20A2F47000F9D7FE /* TextVC.swift in Sources */,
 				42B357CA209410F400474893 /* AppDelegate.swift in Sources */,
 				42B358232094233500474893 /* UIColor+ThemeColor.swift in Sources */,
 				42B3582520944D8700474893 /* AdvancedHome.swift in Sources */,
 				42B3581E20941D9000474893 /* BeginnerHome.swift in Sources */,
+				42ABB7AD20A2F49800F9D7FE /* QXWebVC.swift in Sources */,
 				42B358272094631200474893 /* LibraryHome.swift in Sources */,
 				42B3580B20941B1600474893 /* BaseVC.swift in Sources */,
 			);
@@ -760,6 +772,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 829EBU26GY;
 				INFOPLIST_FILE = SwiftDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -778,6 +791,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 829EBU26GY;
 				INFOPLIST_FILE = SwiftDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

@@ -78,16 +78,77 @@ class LeftVC: BaseVC ,UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         //具体操作
+        let dic = self.data[indexPath.section]
+        let arr  = dic.first?.value
         
+        let model = arr![indexPath.row]
+        var type = ShowWay.board
+        switch model.type {
+        case 1:
+            type = ShowWay.xib
+        case 2:
+            type = ShowWay.url
+        case 3:
+            type = ShowWay.text
+        case 4:
+            type = ShowWay.list
+        default:
+            type = ShowWay.board
+        }
+        switch type {
+        /// storyboard
+        case ShowWay.board:
+            self.gotoBoard(withModel: model)
+        /// xib
+        case ShowWay.xib:
+            self.gotoXib(withModel: model)
+        /// webView
+        case ShowWay.url:
+            self.gotoWeb(withModel: model)
+        /// 文本
+        case ShowWay.text:
+            self.gotoText(withModel: model)
+        /// 列表
+        case ShowWay.list:
+            self.gotoList(withModel: model)
+        }
         
         //收起菜单
         self.menuSwitch()
     }
     
     
-    
-    
-    
+    func gotoBoard(withModel model:CourseModel) -> Void {
+        let web = QXWebVC()
+        web.url = model.data as! String
+        self.gotoCourseVC(widthVC: web)
+    }
+    func gotoXib(withModel model:CourseModel) -> Void {
+        let web = QXWebVC()
+        web.url = model.data as! String
+        self.gotoCourseVC(widthVC: web)
+    }
+    func gotoWeb(withModel model:CourseModel) -> Void {
+        let web = QXWebVC()
+        web.url = model.data as! String
+        self.gotoCourseVC(widthVC: web)
+    }
+    func gotoText(withModel model:CourseModel) -> Void {
+        let web = QXWebVC()
+        web.url = model.data as! String
+        self.gotoCourseVC(widthVC: web)
+    }
+    func gotoList(withModel model:CourseModel) -> Void {
+        let web = QXWebVC()
+        web.url = model.data as! String
+        self.gotoCourseVC(widthVC: web)
+    }
+    func gotoCourseVC(widthVC vc:UIViewController) {
+        let root  = self.appRootVC()
+        let tabVC = root.mainViewController as! BaseTabBarVC
+        let nav   = tabVC.selectedViewController as! BaseNav
+        nav.pushViewController(vc, animated: true)
+    }
     
     
     

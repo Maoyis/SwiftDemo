@@ -8,14 +8,29 @@
 
 import UIKit
 import YYKit
+
+
+
 enum CourseType {
     case Begnner
     case Advanced
     case Library
   
 }
-enum ShowType {
+
+
+enum ShowWay {
+
+    /// storyboard
+    case board
+    /// xib
     case xib
+    /// webView
+    case url
+    /// 文本
+    case text
+    /// 列表
+    case list
 }
 
 class CourseModel: NSObject {
@@ -28,7 +43,7 @@ class CourseModel: NSObject {
     /**显示类型*/
     @objc var type:Int                = 0
     /**数据*/
-    @objc var data:[CourseModel]      = []
+    @objc var data:Any                = ""
     override init() {
         super.init()
     }
@@ -40,6 +55,9 @@ class CourseModel: NSObject {
         self.brief    = brief
         self.identy   = identy
     }
+    
+    
+//MARK:------加载数据--
     
     /// 通过本地plist文件加载对应数据
     ///

@@ -92,7 +92,7 @@ class BaseVC: UIViewController {
         return type
     }
 //MARK:seletor
-    
+    /**菜单切换*/
     @objc func menuSwitch() -> Void {
         let root = self.appRootVC()
         if root.isLeftOpen() {
@@ -102,6 +102,13 @@ class BaseVC: UIViewController {
         }
         
     }
+    /**导航->返回*/
+    @objc func back() -> Void {
+        if (self.navigationController != nil) {
+            self.navigationController?.popViewController(animated: true)
+        }
+    }
+    /**查看官网*/
     @objc func gotoAppleWeb() -> Void {
         let appleWeb = "https://developer.apple.com/library/content/documentation/Swift/Conceptual/Swift_Programming_Language/TheBasics.html#//apple_ref/doc/uid/TP40014097-CH5-ID309"
         let url = URL.init(string: appleWeb)
@@ -109,12 +116,6 @@ class BaseVC: UIViewController {
             print("打开官网")
         }
     }
-    @objc func back() -> Void {
-        if (self.navigationController != nil) {
-            self.navigationController?.popViewController(animated: true)
-        }
-    }
-    
     
     
     
