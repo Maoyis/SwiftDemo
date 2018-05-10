@@ -49,17 +49,20 @@ class QXWebVC: BaseVC,  WKNavigationDelegate, WKUIDelegate{
     }
     
 //MARK:-----WKNavigationDelegate
-/*
+
     ///1. 根据webView、navigationAction相关信息决定这次跳转是否可以继续进行,这些信息包含HTTP发送请求，如头部包含User-Agent,Accept,refer
     ///在发送请求之前，决定是否跳转的代理
     func webView(_ webView: WKWebView, decidePolicyFor navigationAction: WKNavigationAction, decisionHandler: @escaping (WKNavigationActionPolicy) -> Void) {
-    
+        //必须设置该回调
+        decisionHandler(WKNavigationActionPolicy.allow)
         print("1.在发送请求之前，决定是否跳转的代理")
     }
     
     ///2. 这个代理方法表示当客户端收到服务器的响应头，根据response相关信息，可以决定这次跳转是否可以继续进行。
     ///在收到响应后，决定是否跳转的代理
     func webView(_ webView: WKWebView, decidePolicyFor navigationResponse: WKNavigationResponse, decisionHandler: @escaping (WKNavigationResponsePolicy) -> Void) {
+        //必须设置该回调
+        decisionHandler(WKNavigationResponsePolicy.allow)
         print("2.在收到响应后，决定是否跳转的代理")
     }
     ///3. 当开始为主框架加载数据时发生错误。
@@ -68,9 +71,31 @@ class QXWebVC: BaseVC,  WKNavigationDelegate, WKUIDelegate{
     }
     ///4. 需要身份验证时调用
     func webView(_ webView: WKWebView, didReceive challenge: URLAuthenticationChallenge, completionHandler: @escaping (URLSession.AuthChallengeDisposition, URLCredential?) -> Void) {
-        print("4. 需要身份验证时调用")
+         print("4. 需要身份验证时调用")
+        // 判断是否是信任服务器证书
+        if (challenge.protectionSpace.authenticationMethod == NSURLAuthenticationMethodServerTrust) {
+            //先前失败的身份验证尝试的计数为0则信任
+            if (challenge.previousFailureCount == 0) {
+                // 通过completionHandler告诉服务器信任证书
+                let credential = URLCredential.init(trust: challenge.protectionSpace.serverTrust!)
+                //使用指定的凭据，可能为nil。
+                completionHandler(URLSession.AuthChallengeDisposition.useCredential, credential);
+                
+            } else {
+                
+                completionHandler(URLSession.AuthChallengeDisposition.cancelAuthenticationChallenge, nil);
+                
+            }
+            
+        } else {
+            
+            completionHandler(URLSession.AuthChallengeDisposition.cancelAuthenticationChallenge, nil);
+            
+        }
+        
+       
     }
- */
+
     ///5. 准备加载页面。等同于UIWebViewDelegate: - webView:shouldStartLoadWithRequest:navigationType
     func webView(_ webView: WKWebView, didStartProvisionalNavigation navigation: WKNavigation!) {
         print("5. 准备加载页面")

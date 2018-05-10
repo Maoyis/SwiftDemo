@@ -53,6 +53,7 @@
 /* Begin PBXFileReference section */
 		02DD2DE39D9C3058C9484465 /* Pods_SwiftDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4256CEAB209AE35200EF1595 /* beginner.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = beginner.plist; sourceTree = "<group>"; };
+		4283A2D320A4200A00B3BBEC /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		42ABB7A820A2F47000F9D7FE /* TextVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextVC.swift; sourceTree = "<group>"; };
 		42ABB7A920A2F47000F9D7FE /* TextVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TextVC.xib; sourceTree = "<group>"; };
 		42ABB7AC20A2F49800F9D7FE /* QXWebVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QXWebVC.swift; sourceTree = "<group>"; };
@@ -379,6 +380,7 @@
 				42FAADE620A023BF00D5EADB /* advance.plist */,
 				42FAADE720A023BF00D5EADB /* library.plist */,
 				4256CEAB209AE35200EF1595 /* beginner.plist */,
+				4283A2D320A4200A00B3BBEC /* PrefixHeader.pch */,
 			);
 			path = "Support File";
 			sourceTree = "<group>";

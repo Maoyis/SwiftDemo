@@ -54,8 +54,15 @@ class BaseVC: UIViewController {
         cstB.frame =  CGRect(x: 0, y: 0, width: 30, height: 30)
         //cstB.imageEdgeInsets = UIEdgeInsetsMake(0, -30, 0, 0);
         //适配xocde9 xcode9导航栏按钮使用自约束
-        let systemVersion = UIDevice.current.systemVersion
-        if  Double(systemVersion)! > 9.0  {
+        /**
+         方法1-
+         let systemVersion = UIDevice.current.systemVersion
+         Double(systemVersion)! > 9.0
+         当版本未x.x.x时 Double(systemVersion)为nil，会引发catch
+         方法二：
+         #available(iOS 9.0, macOS 10,*)
+         */
+        if  #available(iOS 9.0, *) {
             let wc = cstB.widthAnchor.constraint(equalToConstant: cstB.frame.size.width)
             wc.isActive = true;
             let hc = cstB.heightAnchor.constraint(equalToConstant: cstB.frame.size.height)

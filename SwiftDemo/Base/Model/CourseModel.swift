@@ -18,8 +18,8 @@ enum CourseType {
   
 }
 
-
-enum ShowWay {
+@objc(ShowWay)
+enum ShowWay : Int{
 
     /// storyboard
     case board
@@ -41,7 +41,8 @@ class CourseModel: NSObject {
     /**storyboard上标识*/
     @objc var identy:String           = ""
     /**显示类型*/
-    @objc var type:Int                = 0
+    //@objc var type:Int                = 0
+    @objc var type:ShowWay            = ShowWay.board
     /**数据*/
     @objc var data:Any                = ""
     override init() {

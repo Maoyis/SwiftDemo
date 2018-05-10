@@ -70,8 +70,9 @@ class LeftVC: BaseVC ,UITableViewDelegate, UITableViewDataSource{
         let arr  = dic.first?.value
         
         let model = arr![indexPath.row]
-        
-        cell.textLabel?.text = model.title
+        cell.indentationWidth = 5
+        cell.indentationLevel = 1
+        cell.textLabel?.text = "\(indexPath.section+1).\(indexPath.row+1) " + model.title
         return cell;
         
     }
@@ -82,20 +83,7 @@ class LeftVC: BaseVC ,UITableViewDelegate, UITableViewDataSource{
         let arr  = dic.first?.value
         
         let model = arr![indexPath.row]
-        var type = ShowWay.board
         switch model.type {
-        case 1:
-            type = ShowWay.xib
-        case 2:
-            type = ShowWay.url
-        case 3:
-            type = ShowWay.text
-        case 4:
-            type = ShowWay.list
-        default:
-            type = ShowWay.board
-        }
-        switch type {
         /// storyboard
         case ShowWay.board:
             self.gotoBoard(withModel: model)
@@ -120,7 +108,8 @@ class LeftVC: BaseVC ,UITableViewDelegate, UITableViewDataSource{
     
     func gotoBoard(withModel model:CourseModel) -> Void {
         let web = QXWebVC()
-        web.url = model.data as! String
+        web.url   = model.data as! String
+        web.title = model.title
         self.gotoCourseVC(widthVC: web)
     }
     func gotoXib(withModel model:CourseModel) -> Void {
@@ -131,6 +120,7 @@ class LeftVC: BaseVC ,UITableViewDelegate, UITableViewDataSource{
     func gotoWeb(withModel model:CourseModel) -> Void {
         let web = QXWebVC()
         web.url = model.data as! String
+        web.title = model.title
         self.gotoCourseVC(widthVC: web)
     }
     func gotoText(withModel model:CourseModel) -> Void {
