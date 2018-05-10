@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4256CEAC209AE35200EF1595 /* beginner.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4256CEAB209AE35200EF1595 /* beginner.plist */; };
+		42818C6020A42ECB00F7D0CD /* Beginner.html in Resources */ = {isa = PBXBuildFile; fileRef = 42818C5F20A42ECB00F7D0CD /* Beginner.html */; };
+		4283A2D420A423E400B3BBEC /* beginner.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4283A2D620A423E400B3BBEC /* beginner.plist */; };
 		42ABB7AA20A2F47000F9D7FE /* TextVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42ABB7A820A2F47000F9D7FE /* TextVC.swift */; };
 		42ABB7AB20A2F47000F9D7FE /* TextVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 42ABB7A920A2F47000F9D7FE /* TextVC.xib */; };
 		42ABB7AD20A2F49800F9D7FE /* QXWebVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42ABB7AC20A2F49800F9D7FE /* QXWebVC.swift */; };
@@ -52,8 +53,9 @@
 
 /* Begin PBXFileReference section */
 		02DD2DE39D9C3058C9484465 /* Pods_SwiftDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		4256CEAB209AE35200EF1595 /* beginner.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = beginner.plist; sourceTree = "<group>"; };
+		42818C5F20A42ECB00F7D0CD /* Beginner.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = Beginner.html; sourceTree = "<group>"; };
 		4283A2D320A4200A00B3BBEC /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		4283A2D820A425A700B3BBEC /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Base; path = Base.lproj/beginner.plist; sourceTree = "<group>"; };
 		42ABB7A820A2F47000F9D7FE /* TextVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextVC.swift; sourceTree = "<group>"; };
 		42ABB7A920A2F47000F9D7FE /* TextVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TextVC.xib; sourceTree = "<group>"; };
 		42ABB7AC20A2F49800F9D7FE /* QXWebVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QXWebVC.swift; sourceTree = "<group>"; };
@@ -336,6 +338,7 @@
 		42B3581920941D1900474893 /* Beginner */ = {
 			isa = PBXGroup;
 			children = (
+				42818C5F20A42ECB00F7D0CD /* Beginner.html */,
 				42B3581A20941D1900474893 /* VC */,
 				42B3581B20941D1900474893 /* Model */,
 				42B3581C20941D1900474893 /* View */,
@@ -379,7 +382,7 @@
 				42B35831209466DF00474893 /* Localizable.strings */,
 				42FAADE620A023BF00D5EADB /* advance.plist */,
 				42FAADE720A023BF00D5EADB /* library.plist */,
-				4256CEAB209AE35200EF1595 /* beginner.plist */,
+				4283A2D620A423E400B3BBEC /* beginner.plist */,
 				4283A2D320A4200A00B3BBEC /* PrefixHeader.pch */,
 			);
 			path = "Support File";
@@ -505,9 +508,10 @@
 				42ABB7AB20A2F47000F9D7FE /* TextVC.xib in Resources */,
 				42B357D4209410F900474893 /* LaunchScreen.storyboard in Resources */,
 				42B3582F209466DF00474893 /* Localizable.strings in Resources */,
-				4256CEAC209AE35200EF1595 /* beginner.plist in Resources */,
+				4283A2D420A423E400B3BBEC /* beginner.plist in Resources */,
 				42B357D1209410F900474893 /* Assets.xcassets in Resources */,
 				42B357CF209410F400474893 /* Main.storyboard in Resources */,
+				42818C6020A42ECB00F7D0CD /* Beginner.html in Resources */,
 				42FAADE820A023BF00D5EADB /* advance.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -622,6 +626,14 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		4283A2D620A423E400B3BBEC /* beginner.plist */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4283A2D820A425A700B3BBEC /* Base */,
+			);
+			name = beginner.plist;
+			sourceTree = "<group>";
+		};
 		42B357CD209410F400474893 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -775,6 +787,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 829EBU26GY;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/SwiftDemo/Support File/PrefixHeader.pch";
 				INFOPLIST_FILE = SwiftDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -794,6 +807,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 829EBU26GY;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/SwiftDemo/Support File/PrefixHeader.pch";
 				INFOPLIST_FILE = SwiftDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

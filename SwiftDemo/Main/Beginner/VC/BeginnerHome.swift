@@ -7,14 +7,19 @@
 //
 
 import UIKit
+import WebKit
 
 class BeginnerHome: BaseVC {
 
+    @IBOutlet weak var web: WKWebView!
+    lazy var fileUrl: URL = {
+        let url = Bundle.main.url(forResource: "Beginner", withExtension: "html")
+        return url!
+    }()
     override func viewDidLoad() {
         super.viewDidLoad()
-        let arr = CourseModel.getCourseData(withFile: "beginner")
-        print("\(arr)")
-        
+        self.web.loadFileURL(self.fileUrl, allowingReadAccessTo: self.fileUrl)
+
     }
 
     override func didReceiveMemoryWarning() {
