@@ -8,8 +8,13 @@
 
 import UIKit
 
+
+let headerH = 50.0 as CGFloat
+
 class LeftVC: BaseVC ,UITableViewDelegate, UITableViewDataSource{
  
+    var selectedSection:Int = -1
+    
     var data:Array<Dictionary<String, Array<CourseModel>>> = []
     
     lazy var table: UITableView = {
@@ -50,16 +55,35 @@ class LeftVC: BaseVC ,UITableViewDelegate, UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        let dic = self.data[section]
-        let arr  = dic.first?.value
-        return (arr?.count)!
+        if section == self.selectedSection {
+            let dic = self.data[section]
+            let arr  = dic.first?.value
+            return (arr?.count)!
+        }
+        return 0
+        
     }
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        let label = UILabel.init(frame:CGRect(x:0, y:0, width:self.view.bounds.size.width, height:20));
-        label.font = UIFont.systemFont(ofSize: 12)
+        
+        let header = UIButton.init(type: UIButtonType.custom)
+        header.frame = CGRect(x:0, y:0, width:self.view.bounds.size.width, height:headerH)
+        header.tag = 1000 + section
+        header.backgroundColor = UIColor.app_F9F9F9
+        if self.selectedSection == section {
+            header.backgroundColor = UIColor.clear
+        }
         let data = self.data[section]
-        label.text = "  " + (data.first?.key)!
-        return label;
+        let text = "  " + (data.first?.key)!
+        header.setTitle(text, for: UIControlState.normal)
+        header.setTitleColor(UIColor.app_333333, for: UIControlState.normal)
+        
+        header.contentHorizontalAlignment = .left
+        let label = header.titleLabel
+        label?.font = UIFont.systemFont(ofSize: 15)
+        
+        header.addTarget(self, action: #selector(appearCourse), for: UIControlEvents.touchUpInside)
+        
+        return header;
     
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -83,6 +107,23 @@ class LeftVC: BaseVC ,UITableViewDelegate, UITableViewDataSource{
         let arr  = dic.first?.value
         
         let model = arr![indexPath.row]
+        self.gotoCourse(withCourse: model)
+        
+        //收起菜单
+        self.menuSwitch()
+    }
+    //MARK:Table常规设置
+    func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
+        return nil;
+    }
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return headerH
+    }
+    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        return 1
+    }
+    //MARK:----Action
+    func gotoCourse(withCourse model:CourseModel) -> Void {
         switch model.type {
         /// storyboard
         case ShowWay.board:
@@ -100,12 +141,7 @@ class LeftVC: BaseVC ,UITableViewDelegate, UITableViewDataSource{
         case ShowWay.list:
             self.gotoList(withModel: model)
         }
-        
-        //收起菜单
-        self.menuSwitch()
     }
-    
-    
     func gotoBoard(withModel model:CourseModel) -> Void {
         let web = QXWebVC()
         web.url   = model.data as! String
@@ -140,16 +176,17 @@ class LeftVC: BaseVC ,UITableViewDelegate, UITableViewDataSource{
         nav.pushViewController(vc, animated: true)
     }
     
+    @objc func appearCourse(header:UIButton) -> Void {
+        let section = header.tag - 1000
+        if self.selectedSection == section {
+            self.selectedSection = -1
+        }else{
+            
+            self.selectedSection = section
+        }
+        self.table.reloadData()
+        
+    }
     
     
-    //MARK:Table常规设置
-    func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
-        return nil;
-    }
-    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 20
-    }
-    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
-        return 0.1
-    }
 }

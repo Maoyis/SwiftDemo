@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		42818C6020A42ECB00F7D0CD /* Beginner.html in Resources */ = {isa = PBXBuildFile; fileRef = 42818C5F20A42ECB00F7D0CD /* Beginner.html */; };
+		42818C6620A533AE00F7D0CD /* MenuHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42818C6520A533AE00F7D0CD /* MenuHeader.swift */; };
 		4283A2D420A423E400B3BBEC /* beginner.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4283A2D620A423E400B3BBEC /* beginner.plist */; };
 		42ABB7AA20A2F47000F9D7FE /* TextVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42ABB7A820A2F47000F9D7FE /* TextVC.swift */; };
 		42ABB7AB20A2F47000F9D7FE /* TextVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 42ABB7A920A2F47000F9D7FE /* TextVC.xib */; };
@@ -54,6 +55,7 @@
 /* Begin PBXFileReference section */
 		02DD2DE39D9C3058C9484465 /* Pods_SwiftDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		42818C5F20A42ECB00F7D0CD /* Beginner.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = Beginner.html; sourceTree = "<group>"; };
+		42818C6520A533AE00F7D0CD /* MenuHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuHeader.swift; sourceTree = "<group>"; };
 		4283A2D320A4200A00B3BBEC /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		4283A2D820A425A700B3BBEC /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Base; path = Base.lproj/beginner.plist; sourceTree = "<group>"; };
 		42ABB7A820A2F47000F9D7FE /* TextVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextVC.swift; sourceTree = "<group>"; };
@@ -225,6 +227,7 @@
 			children = (
 				42B3580820941A5500474893 /* RootVC.swift */,
 				42B3581F209420D600474893 /* LeftVC.swift */,
+				42818C6520A533AE00F7D0CD /* MenuHeader.swift */,
 			);
 			path = RootMenu;
 			sourceTree = "<group>";
@@ -581,6 +584,7 @@
 				42B35829209464AF00474893 /* CourseModel.swift in Sources */,
 				42B3580920941A5500474893 /* RootVC.swift in Sources */,
 				42B35807209419B600474893 /* BaseTabBarVC.swift in Sources */,
+				42818C6620A533AE00F7D0CD /* MenuHeader.swift in Sources */,
 				42B35820209420D600474893 /* LeftVC.swift in Sources */,
 				42B358052094196200474893 /* BaseNav.swift in Sources */,
 				42ABB7AA20A2F47000F9D7FE /* TextVC.swift in Sources */,
