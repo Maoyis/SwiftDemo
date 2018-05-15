@@ -26,14 +26,14 @@
 				<key>title</key>
 				<string>多线程</string>
 				<key>type</key>
-				<integer>5</integer>
+				<integer>4</integer>
 				<key>data</key>
 				<array>
 					<dict>
 						<key>title</key>
 						<string>简介</string>
 						<key>type</key>
-						<integer>2</integer>
+						<integer>5</integer>
 						<key>data</key>
 						<string>线程</string>
 					</dict>
