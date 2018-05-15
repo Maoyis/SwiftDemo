@@ -28,8 +28,8 @@ class QXWebVC: BaseVC,  WKNavigationDelegate, WKUIDelegate{
     
     let progressH = 2.0
     
-    var url:String = ""
-
+    var data:String  = ""
+    var isHTML:Bool = false
     
     lazy var progressView: UIView = {
         let pv = UIView.init(frame: CGRect(x:0, y:0, width:0.1, height:self.progressH))
@@ -46,9 +46,15 @@ class QXWebVC: BaseVC,  WKNavigationDelegate, WKUIDelegate{
     }()
     override func viewDidLoad() {
         super.viewDidLoad()
-        let url = URL.init(string: self.url)
-        let request = NSURLRequest.init(url: url!)
-        self.web.load(request as URLRequest)
+        if self.isHTML {
+            let fileUrl = Bundle.main.url(forResource:self.data, withExtension: "html")
+            self.web.loadFileURL(fileUrl!, allowingReadAccessTo:fileUrl!)
+        }else{
+            let url = URL.init(string: self.data)
+            let request = NSURLRequest.init(url: url!)
+            self.web.load(request as URLRequest)
+        }
+        
         self.view.addSubview(self.web)
         self.addProgressObsever()
     }

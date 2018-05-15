@@ -145,30 +145,33 @@ class LeftVC: BaseVC ,UITableViewDelegate, UITableViewDataSource{
         /// 列表
         case ShowWay.list:
             self.gotoList(withModel: model)
+        /// html
+        case ShowWay.html:
+            self.gotoHTML(withModel: model)
         }
     }
     //MARK:----对应类型跳转处理
     func gotoBoard(withModel model:CourseModel) -> Void {
-        let web = QXWebVC()
-        web.url   = model.data as! String
-        web.title = model.title
-        self.gotoCourseVC(widthVC: web)
+
     }
     func gotoXib(withModel model:CourseModel) -> Void {
-        let web = QXWebVC()
-        web.url = model.data as! String
-        self.gotoCourseVC(widthVC: web)
+
     }
     func gotoWeb(withModel model:CourseModel) -> Void {
         let web = QXWebVC()
-        web.url = model.data as! String
+        web.data = model.data as! String
+        web.title = model.title
+        self.gotoCourseVC(widthVC: web)
+    }
+    func gotoHTML(withModel model:CourseModel) -> Void {
+        let web = QXWebVC()
+        web.data = model.data as! String
+        web.isHTML = true
         web.title = model.title
         self.gotoCourseVC(widthVC: web)
     }
     func gotoText(withModel model:CourseModel) -> Void {
-        let web = QXWebVC()
-        web.url = model.data as! String
-        self.gotoCourseVC(widthVC: web)
+
     }
     func gotoList(withModel model:CourseModel) -> Void {
         let listVC = QXListVC()
@@ -177,10 +180,7 @@ class LeftVC: BaseVC ,UITableViewDelegate, UITableViewDataSource{
         self.gotoCourseVC(widthVC: listVC)
     }
     func gotoCourseVC(widthVC vc:UIViewController) {
-        let root  = self.appRootVC()
-        let tabVC = root.mainViewController as! BaseTabBarVC
-        let nav   = tabVC.selectedViewController as! BaseNav
-        nav.pushViewController(vc, animated: true)
+ 
     }
     //MARK:目录折叠
     @objc func appearCourse(header:UIButton) -> Void {

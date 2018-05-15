@@ -31,6 +31,8 @@ enum ShowWay : Int{
     case text
     /// 列表
     case list
+    /// webView
+    case html
 }
 
 class CourseModel: NSObject {
