@@ -30,6 +30,8 @@
 		42B358272094631200474893 /* LibraryHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B358262094631200474893 /* LibraryHome.swift */; };
 		42B35829209464AF00474893 /* CourseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B35828209464AF00474893 /* CourseModel.swift */; };
 		42B3582F209466DF00474893 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 42B35831209466DF00474893 /* Localizable.strings */; };
+		42EFA62020AA7B5500EB588B /* QXListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42EFA61F20AA7B5500EB588B /* QXListVC.swift */; };
+		42EFA62320AAD91A00EB588B /* 线程.html in Resources */ = {isa = PBXBuildFile; fileRef = 42EFA62220AAD91A00EB588B /* 线程.html */; };
 		42FAADE820A023BF00D5EADB /* advance.plist in Resources */ = {isa = PBXBuildFile; fileRef = 42FAADE620A023BF00D5EADB /* advance.plist */; };
 		42FAADE920A023BF00D5EADB /* library.plist in Resources */ = {isa = PBXBuildFile; fileRef = 42FAADE720A023BF00D5EADB /* library.plist */; };
 		B522CD717BAB56DC51B9DC78 /* Pods_SwiftDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02DD2DE39D9C3058C9484465 /* Pods_SwiftDemo.framework */; };
@@ -87,6 +89,8 @@
 		42B3582B2094667900474893 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
 		42B35830209466DF00474893 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		42B35832209466E100474893 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		42EFA61F20AA7B5500EB588B /* QXListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QXListVC.swift; sourceTree = "<group>"; };
+		42EFA62220AAD91A00EB588B /* 线程.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "线程.html"; sourceTree = "<group>"; };
 		42FAADE620A023BF00D5EADB /* advance.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = advance.plist; sourceTree = "<group>"; };
 		42FAADE720A023BF00D5EADB /* library.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = library.plist; sourceTree = "<group>"; };
 		95C8F655674BB2B07842FC73 /* Pods-SwiftDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftDemo/Pods-SwiftDemo.debug.xcconfig"; sourceTree = "<group>"; };
@@ -203,6 +207,7 @@
 				42ABB7A820A2F47000F9D7FE /* TextVC.swift */,
 				42ABB7A920A2F47000F9D7FE /* TextVC.xib */,
 				42ABB7AC20A2F49800F9D7FE /* QXWebVC.swift */,
+				42EFA61F20AA7B5500EB588B /* QXListVC.swift */,
 			);
 			path = VC;
 			sourceTree = "<group>";
@@ -277,6 +282,8 @@
 		42B3581120941D1900474893 /* Advanced */ = {
 			isa = PBXGroup;
 			children = (
+				42EFA62220AAD91A00EB588B /* 线程.html */,
+				42EFA62120AAD90F00EB588B /* Sources */,
 				42B3581220941D1900474893 /* VC */,
 				42B3581320941D1900474893 /* Model */,
 				42B3581420941D1900474893 /* View */,
@@ -389,6 +396,13 @@
 				4283A2D320A4200A00B3BBEC /* PrefixHeader.pch */,
 			);
 			path = "Support File";
+			sourceTree = "<group>";
+		};
+		42EFA62120AAD90F00EB588B /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Sources;
 			sourceTree = "<group>";
 		};
 		73A7F192DF61251549406408 /* Pods */ = {
@@ -509,6 +523,7 @@
 			files = (
 				42FAADE920A023BF00D5EADB /* library.plist in Resources */,
 				42ABB7AB20A2F47000F9D7FE /* TextVC.xib in Resources */,
+				42EFA62320AAD91A00EB588B /* 线程.html in Resources */,
 				42B357D4209410F900474893 /* LaunchScreen.storyboard in Resources */,
 				42B3582F209466DF00474893 /* Localizable.strings in Resources */,
 				4283A2D420A423E400B3BBEC /* beginner.plist in Resources */,
@@ -581,6 +596,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				42EFA62020AA7B5500EB588B /* QXListVC.swift in Sources */,
 				42B35829209464AF00474893 /* CourseModel.swift in Sources */,
 				42B3580920941A5500474893 /* RootVC.swift in Sources */,
 				42B35807209419B600474893 /* BaseTabBarVC.swift in Sources */,

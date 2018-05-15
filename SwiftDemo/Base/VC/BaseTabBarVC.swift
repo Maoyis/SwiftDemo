@@ -13,7 +13,7 @@ class BaseTabBarVC: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.initTab()
-        // Do any additional setup after loading the view.
+        self.selectedIndex = 1
     }
     
     override func didReceiveMemoryWarning() {

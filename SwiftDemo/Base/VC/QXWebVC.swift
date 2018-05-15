@@ -29,7 +29,7 @@ class QXWebVC: BaseVC,  WKNavigationDelegate, WKUIDelegate{
     let progressH = 2.0
     
     var url:String = ""
-    
+
     
     lazy var progressView: UIView = {
         let pv = UIView.init(frame: CGRect(x:0, y:0, width:0.1, height:self.progressH))

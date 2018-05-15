@@ -3,20 +3,73 @@
 <plist version="1.0">
 <array>
 	<dict>
-		<key>简介</key>
+		<key>数据存储</key>
 		<array>
 			<dict>
 				<key>title</key>
-				<string>swift简介</string>
+				<string>CoreData</string>
+			</dict>
+			<dict>
+				<key>title</key>
+				<string>FMDB</string>
+			</dict>
+			<dict>
+				<key>title</key>
+				<string>Realm</string>
 			</dict>
 		</array>
 	</dict>
 	<dict>
-		<key>语法</key>
+		<key>其他</key>
 		<array>
 			<dict>
 				<key>title</key>
-				<string>常亮与变量</string>
+				<string>多线程</string>
+				<key>type</key>
+				<integer>4</integer>
+				<key>data</key>
+				<array>
+					<dict>
+						<key>title</key>
+						<string>简介</string>
+						<key>type</key>
+						<integer>2</integer>
+						<key>data</key>
+						<string>线程</string>
+					</dict>
+					<dict>
+						<key>title</key>
+						<string>Pthreads</string>
+						<key>type</key>
+						<integer>2</integer>
+						<key>data</key>
+						<string>https://www.cnblogs.com/blueclue/archive/2010/07/16/1779006.html</string>
+					</dict>
+					<dict>
+						<key>title</key>
+						<string>NSThread</string>
+						<key>type</key>
+						<integer>2</integer>
+						<key>data</key>
+						<string></string>
+					</dict>
+					<dict>
+						<key>title</key>
+						<string>NSOperation</string>
+						<key>type</key>
+						<integer>2</integer>
+						<key>data</key>
+						<string></string>
+					</dict>
+					<dict>
+						<key>title</key>
+						<string>GCD</string>
+						<key>type</key>
+						<integer>2</integer>
+						<key>data</key>
+						<string></string>
+					</dict>
+				</array>
 			</dict>
 		</array>
 	</dict>

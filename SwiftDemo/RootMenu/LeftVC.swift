@@ -18,9 +18,13 @@ class LeftVC: BaseVC ,UITableViewDelegate, UITableViewDataSource{
     var data:Array<Dictionary<String, Array<CourseModel>>> = []
     
     lazy var table: UITableView = {
-        let table = UITableView.init(frame: self.view.bounds, style: UITableViewStyle.grouped)
+        let frame = CGRect(x:0, y:-44, width:self.view.bounds.size.width, height:self.view.bounds.size.height)
+        // self.view.bounds
+        let table = UITableView.init(frame:frame, style: UITableViewStyle.grouped)
         table.tableFooterView = UIView.init()
-        table.tableHeaderView = UIView.init(frame: CGRect(x:0, y:0, width:self.view.bounds.size.width, height:0.1))
+        let header = UIView.init(frame: CGRect(x:0, y:0, width:self.view.bounds.size.width, height:64))
+        header.backgroundColor = UIColor.white
+        table.tableHeaderView = header
         table.delegate   = self;
         table.dataSource = self;
         
@@ -68,10 +72,10 @@ class LeftVC: BaseVC ,UITableViewDelegate, UITableViewDataSource{
         let header = UIButton.init(type: UIButtonType.custom)
         header.frame = CGRect(x:0, y:0, width:self.view.bounds.size.width, height:headerH)
         header.tag = 1000 + section
-        header.backgroundColor = UIColor.app_F9F9F9
-        if self.selectedSection == section {
-            header.backgroundColor = UIColor.clear
-        }
+        header.backgroundColor = UIColor.white
+//        if self.selectedSection == section {
+//            header.backgroundColor = UIColor.app_bg
+//        }
         let data = self.data[section]
         let text = "  " + (data.first?.key)!
         header.setTitle(text, for: UIControlState.normal)
@@ -94,6 +98,7 @@ class LeftVC: BaseVC ,UITableViewDelegate, UITableViewDataSource{
         let arr  = dic.first?.value
         
         let model = arr![indexPath.row]
+        cell.backgroundColor = UIColor.app_F9F9F9
         cell.indentationWidth = 5
         cell.indentationLevel = 1
         cell.textLabel?.text = "\(indexPath.section+1).\(indexPath.row+1) " + model.title
@@ -142,6 +147,7 @@ class LeftVC: BaseVC ,UITableViewDelegate, UITableViewDataSource{
             self.gotoList(withModel: model)
         }
     }
+    //MARK:----对应类型跳转处理
     func gotoBoard(withModel model:CourseModel) -> Void {
         let web = QXWebVC()
         web.url   = model.data as! String
@@ -165,9 +171,10 @@ class LeftVC: BaseVC ,UITableViewDelegate, UITableViewDataSource{
         self.gotoCourseVC(widthVC: web)
     }
     func gotoList(withModel model:CourseModel) -> Void {
-        let web = QXWebVC()
-        web.url = model.data as! String
-        self.gotoCourseVC(widthVC: web)
+        let listVC = QXListVC()
+        listVC.title = model.title
+        listVC.data = NSArray.modelArray(with: CourseModel.classForCoder(), json: model.data) as! Array<CourseModel>
+        self.gotoCourseVC(widthVC: listVC)
     }
     func gotoCourseVC(widthVC vc:UIViewController) {
         let root  = self.appRootVC()
@@ -175,7 +182,7 @@ class LeftVC: BaseVC ,UITableViewDelegate, UITableViewDataSource{
         let nav   = tabVC.selectedViewController as! BaseNav
         nav.pushViewController(vc, animated: true)
     }
-    
+    //MARK:目录折叠
     @objc func appearCourse(header:UIButton) -> Void {
         let section = header.tag - 1000
         if self.selectedSection == section {
