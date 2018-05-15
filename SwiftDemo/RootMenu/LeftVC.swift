@@ -180,7 +180,10 @@ class LeftVC: BaseVC ,UITableViewDelegate, UITableViewDataSource{
         self.gotoCourseVC(widthVC: listVC)
     }
     func gotoCourseVC(widthVC vc:UIViewController) {
- 
+        let root  = self.appRootVC()
+        let tabVC = root.mainViewController as! BaseTabBarVC
+        let nav   = tabVC.selectedViewController as! BaseNav
+        nav.pushViewController(vc, animated: true)
     }
     //MARK:目录折叠
     @objc func appearCourse(header:UIButton) -> Void {
