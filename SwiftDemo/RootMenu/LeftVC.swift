@@ -79,11 +79,11 @@ class LeftVC: BaseVC ,UITableViewDelegate, UITableViewDataSource{
         let data = self.data[section]
         let text = "  " + (data.first?.key)!
         header.setTitle(text, for: UIControlState.normal)
-        header.setTitleColor(UIColor.app_333333, for: UIControlState.normal)
+        header.setTitleColor(UIColor.black, for: UIControlState.normal)
         
         header.contentHorizontalAlignment = .left
         let label = header.titleLabel
-        label?.font = UIFont.systemFont(ofSize: 15)
+        label?.font = UIFont.systemFont(ofSize: 16)
         
         header.addTarget(self, action: #selector(appearCourse), for: UIControlEvents.touchUpInside)
         
@@ -98,10 +98,13 @@ class LeftVC: BaseVC ,UITableViewDelegate, UITableViewDataSource{
         let arr  = dic.first?.value
         
         let model = arr![indexPath.row]
-        cell.backgroundColor = UIColor.app_F9F9F9
+        cell.backgroundColor      = UIColor.app_F9F9F9
+        cell.textLabel?.textColor = UIColor.app_333333
+        cell.textLabel?.font      = UIFont.systemFont(ofSize: 14)
         cell.indentationWidth = 5
         cell.indentationLevel = 1
-        cell.textLabel?.text = "\(indexPath.section+1).\(indexPath.row+1) " + model.title
+        cell.textLabel?.text  = "\(indexPath.section+1).\(indexPath.row+1) " +
+                                    model.title
         return cell;
         
     }

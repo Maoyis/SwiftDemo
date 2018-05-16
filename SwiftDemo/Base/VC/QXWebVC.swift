@@ -26,13 +26,13 @@ import WebKit
 
 class QXWebVC: BaseVC,  WKNavigationDelegate, WKUIDelegate{
     
-    let progressH = 2.0
+    let progressH = 1.5
     
     var data:String  = ""
     var isHTML:Bool = false
     
     lazy var progressView: UIView = {
-        let pv = UIView.init(frame: CGRect(x:0, y:0, width:0.1, height:self.progressH))
+        let pv = UIView.init(frame: CGRect(x:0, y:0, width:2, height:self.progressH))
         pv.backgroundColor = UIColor.app_mainTheme
         self.web.addSubview(pv)
         return pv
@@ -56,7 +56,9 @@ class QXWebVC: BaseVC,  WKNavigationDelegate, WKUIDelegate{
         }
         
         self.view.addSubview(self.web)
+        self.web.addSubview(self.progressView)
         self.addProgressObsever()
+        
     }
 
     func addProgressObsever() {
