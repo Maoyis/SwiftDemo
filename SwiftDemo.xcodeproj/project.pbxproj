@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		425FF78220AED4C100AB97A7 /* Charts.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 425FF78120AED4C100AB97A7 /* Charts.storyboard */; };
+		425FF78420AED77500AB97A7 /* ChartsHomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 425FF78320AED77500AB97A7 /* ChartsHomeVC.swift */; };
 		42818C6020A42ECB00F7D0CD /* Beginner.html in Resources */ = {isa = PBXBuildFile; fileRef = 42818C5F20A42ECB00F7D0CD /* Beginner.html */; };
 		42818C6620A533AE00F7D0CD /* MenuHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42818C6520A533AE00F7D0CD /* MenuHeader.swift */; };
 		4283A2D420A423E400B3BBEC /* beginner.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4283A2D620A423E400B3BBEC /* beginner.plist */; };
@@ -58,6 +59,7 @@
 /* Begin PBXFileReference section */
 		02DD2DE39D9C3058C9484465 /* Pods_SwiftDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		425FF78120AED4C100AB97A7 /* Charts.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Charts.storyboard; sourceTree = "<group>"; };
+		425FF78320AED77500AB97A7 /* ChartsHomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartsHomeVC.swift; sourceTree = "<group>"; };
 		42818C5F20A42ECB00F7D0CD /* Beginner.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = Beginner.html; sourceTree = "<group>"; };
 		42818C6520A533AE00F7D0CD /* MenuHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuHeader.swift; sourceTree = "<group>"; };
 		4283A2D320A4200A00B3BBEC /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
@@ -161,6 +163,7 @@
 		425FF77F20AED43000AB97A7 /* VC */ = {
 			isa = PBXGroup;
 			children = (
+				425FF78320AED77500AB97A7 /* ChartsHomeVC.swift */,
 			);
 			path = VC;
 			sourceTree = "<group>";
@@ -646,6 +649,7 @@
 				42B35829209464AF00474893 /* CourseModel.swift in Sources */,
 				42B3580920941A5500474893 /* RootVC.swift in Sources */,
 				42B35807209419B600474893 /* BaseTabBarVC.swift in Sources */,
+				425FF78420AED77500AB97A7 /* ChartsHomeVC.swift in Sources */,
 				42818C6620A533AE00F7D0CD /* MenuHeader.swift in Sources */,
 				42B35820209420D600474893 /* LeftVC.swift in Sources */,
 				42B358052094196200474893 /* BaseNav.swift in Sources */,
