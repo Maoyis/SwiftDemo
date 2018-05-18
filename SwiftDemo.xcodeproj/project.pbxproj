@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		425FF78220AED4C100AB97A7 /* Charts.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 425FF78120AED4C100AB97A7 /* Charts.storyboard */; };
 		42818C6020A42ECB00F7D0CD /* Beginner.html in Resources */ = {isa = PBXBuildFile; fileRef = 42818C5F20A42ECB00F7D0CD /* Beginner.html */; };
 		42818C6620A533AE00F7D0CD /* MenuHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42818C6520A533AE00F7D0CD /* MenuHeader.swift */; };
 		4283A2D420A423E400B3BBEC /* beginner.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4283A2D620A423E400B3BBEC /* beginner.plist */; };
@@ -56,6 +57,7 @@
 
 /* Begin PBXFileReference section */
 		02DD2DE39D9C3058C9484465 /* Pods_SwiftDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		425FF78120AED4C100AB97A7 /* Charts.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Charts.storyboard; sourceTree = "<group>"; };
 		42818C5F20A42ECB00F7D0CD /* Beginner.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = Beginner.html; sourceTree = "<group>"; };
 		42818C6520A533AE00F7D0CD /* MenuHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuHeader.swift; sourceTree = "<group>"; };
 		4283A2D320A4200A00B3BBEC /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
@@ -151,6 +153,7 @@
 			children = (
 				425FF77F20AED43000AB97A7 /* VC */,
 				425FF78020AED43000AB97A7 /* View */,
+				425FF78120AED4C100AB97A7 /* Charts.storyboard */,
 			);
 			path = Charts;
 			sourceTree = "<group>";
@@ -563,6 +566,7 @@
 			files = (
 				42FAADE920A023BF00D5EADB /* library.plist in Resources */,
 				42ABB7AB20A2F47000F9D7FE /* TextVC.xib in Resources */,
+				425FF78220AED4C100AB97A7 /* Charts.storyboard in Resources */,
 				42EFA62320AAD91A00EB588B /* 线程.html in Resources */,
 				42B357D4209410F900474893 /* LaunchScreen.storyboard in Resources */,
 				42B3582F209466DF00474893 /* Localizable.strings in Resources */,

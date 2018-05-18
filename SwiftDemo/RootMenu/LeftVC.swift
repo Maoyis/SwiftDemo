@@ -155,7 +155,9 @@ class LeftVC: BaseVC ,UITableViewDelegate, UITableViewDataSource{
     }
     //MARK:----对应类型跳转处理
     func gotoBoard(withModel model:CourseModel) -> Void {
-
+        let root = UIStoryboard.init(name: model.data as! String, bundle: nil).instantiateInitialViewController()
+        root?.title = model.title
+        self.gotoCourseVC(widthVC: root!)
     }
     func gotoXib(withModel model:CourseModel) -> Void {
 
