@@ -8,6 +8,8 @@ pod 'SlideMenuControllerSwift'
 
 pod 'YYKit'
 
+pod 'Charts'
+
 
 
 

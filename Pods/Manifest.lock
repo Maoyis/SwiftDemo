@@ -1,22 +1,28 @@
 PODS:
+  - Charts (3.1.1):
+    - Charts/Core (= 3.1.1)
+  - Charts/Core (3.1.1)
   - SlideMenuControllerSwift (4.0.0)
   - YYKit (1.0.9):
     - YYKit/no-arc (= 1.0.9)
   - YYKit/no-arc (1.0.9)
 
 DEPENDENCIES:
+  - Charts
   - SlideMenuControllerSwift
   - YYKit
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
+    - Charts
     - SlideMenuControllerSwift
     - YYKit
 
 SPEC CHECKSUMS:
+  Charts: 90a4d61da0f6e06684c591e3bcab11940fe61736
   SlideMenuControllerSwift: 021d6318201c53d4d4d3710517d43d6c556c7dd0
   YYKit: 7cda43304a8dc3696c449041e2cb3107b4e236e7
 
-PODFILE CHECKSUM: 773960f18f451d756516a4d93f4abc83afaf0bf2
+PODFILE CHECKSUM: a2bf366763292e3020c4f4e0a1b5407c5402deb3
 
 COCOAPODS: 1.5.0

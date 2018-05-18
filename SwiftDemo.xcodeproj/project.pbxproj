@@ -131,6 +131,44 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		425FF77920AED35300AB97A7 /* Sub */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Sub;
+			sourceTree = "<group>";
+		};
+		425FF77D20AED43000AB97A7 /* Sub */ = {
+			isa = PBXGroup;
+			children = (
+				425FF77E20AED43000AB97A7 /* Charts */,
+			);
+			path = Sub;
+			sourceTree = "<group>";
+		};
+		425FF77E20AED43000AB97A7 /* Charts */ = {
+			isa = PBXGroup;
+			children = (
+				425FF77F20AED43000AB97A7 /* VC */,
+				425FF78020AED43000AB97A7 /* View */,
+			);
+			path = Charts;
+			sourceTree = "<group>";
+		};
+		425FF77F20AED43000AB97A7 /* VC */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = VC;
+			sourceTree = "<group>";
+		};
+		425FF78020AED43000AB97A7 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		42B357BD209410F400474893 = {
 			isa = PBXGroup;
 			children = (
@@ -282,6 +320,7 @@
 		42B3581120941D1900474893 /* Advanced */ = {
 			isa = PBXGroup;
 			children = (
+				425FF77920AED35300AB97A7 /* Sub */,
 				42EFA62220AAD91A00EB588B /* 线程.html */,
 				42EFA62120AAD90F00EB588B /* Sources */,
 				42B3581220941D1900474893 /* VC */,
@@ -316,6 +355,7 @@
 		42B3581520941D1900474893 /* Library */ = {
 			isa = PBXGroup;
 			children = (
+				425FF77D20AED43000AB97A7 /* Sub */,
 				42B3581620941D1900474893 /* VC */,
 				42B3581720941D1900474893 /* Model */,
 				42B3581820941D1900474893 /* View */,
@@ -558,11 +598,13 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-SwiftDemo/Pods-SwiftDemo-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Charts/Charts.framework",
 				"${BUILT_PRODUCTS_DIR}/SlideMenuControllerSwift/SlideMenuControllerSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/YYKit/YYKit.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Charts.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SlideMenuControllerSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YYKit.framework",
 			);

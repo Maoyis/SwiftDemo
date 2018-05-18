@@ -3,7 +3,7 @@
 <plist version="1.0">
 <array>
 	<dict>
-		<key>简介</key>
+		<key>常用</key>
 		<array>
 			<dict>
 				<key>title</key>
@@ -12,11 +12,15 @@
 		</array>
 	</dict>
 	<dict>
-		<key>语法</key>
+		<key>功能</key>
 		<array>
 			<dict>
 				<key>title</key>
-				<string>常亮与变量</string>
+				<string>Charts</string>
+				<key>type</key>
+				<string>0</string>
+				<key>data</key>
+				<string>Charts</string>
 			</dict>
 		</array>
 	</dict>
