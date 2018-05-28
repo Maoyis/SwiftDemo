@@ -12,11 +12,11 @@ class BaseVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.initConfig()
+        self.initBaseUI()
         // Do any additional setup after loading the view.
     }
 
-    func initConfig() -> Void {
+    func initBaseUI() -> Void {
         
         
         self.view.backgroundColor = UIColor.app_bg

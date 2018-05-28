@@ -42,7 +42,48 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="i87-5M-DlH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-338" y="-42"/>
+            <point key="canvasLocation" x="-567" y="-179"/>
+        </scene>
+        <!--LineVC-->
+        <scene sceneID="Y3X-aR-dIz">
+            <objects>
+                <viewController storyboardIdentifier="LineVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="z3s-Vs-5mC" customClass="LineVC" customModule="SwiftDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="tIz-gG-drK">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9Px-KG-j1J" customClass="LineChartView" customModule="Charts">
+                                <rect key="frame" x="0.0" y="20" width="375" height="617"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SzA-cg-eGn">
+                                <rect key="frame" x="0.0" y="637" width="375" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="resetAction:" destination="z3s-Vs-5mC" eventType="touchUpInside" id="1Fa-ge-TkF"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="YWT-F0-Bm9" firstAttribute="trailing" secondItem="SzA-cg-eGn" secondAttribute="trailing" id="AIZ-8d-exh"/>
+                            <constraint firstItem="YWT-F0-Bm9" firstAttribute="bottom" secondItem="SzA-cg-eGn" secondAttribute="bottom" id="GTJ-Yw-UBp"/>
+                            <constraint firstItem="YWT-F0-Bm9" firstAttribute="trailing" secondItem="9Px-KG-j1J" secondAttribute="trailing" id="LBX-wF-zBu"/>
+                            <constraint firstItem="9Px-KG-j1J" firstAttribute="leading" secondItem="YWT-F0-Bm9" secondAttribute="leading" id="O4J-Ok-JsW"/>
+                            <constraint firstItem="SzA-cg-eGn" firstAttribute="leading" secondItem="YWT-F0-Bm9" secondAttribute="leading" id="UFj-f7-Pr6"/>
+                            <constraint firstItem="SzA-cg-eGn" firstAttribute="top" secondItem="9Px-KG-j1J" secondAttribute="bottom" id="fep-iV-g00"/>
+                            <constraint firstItem="9Px-KG-j1J" firstAttribute="top" secondItem="YWT-F0-Bm9" secondAttribute="top" id="gFu-GM-aVX"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="YWT-F0-Bm9"/>
+                    </view>
+                    <connections>
+                        <outlet property="lineView" destination="9Px-KG-j1J" id="uoo-dI-PR7"/>
+                        <outlet property="reset" destination="SzA-cg-eGn" id="fNo-e2-Pbb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oUA-8D-QCv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="104.8" y="-170.46476761619192"/>
         </scene>
     </scenes>
 </document>

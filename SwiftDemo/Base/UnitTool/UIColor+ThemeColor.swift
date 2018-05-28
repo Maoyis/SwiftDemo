@@ -54,4 +54,17 @@ extension UIColor{
     @objc static var app_default:UIColor{
         return UIColor.white
     }
+    
+    
+    @objc func changeAlpha(alpha:CGFloat) -> UIColor {
+        let hue = UnsafeMutablePointer<CGFloat>.allocate(capacity: 1)
+        let sat = UnsafeMutablePointer<CGFloat>.allocate(capacity: 1)
+        let bri = UnsafeMutablePointer<CGFloat>.allocate(capacity: 1)
+        let alp = UnsafeMutablePointer<CGFloat>.allocate(capacity: 1)
+        self.getHue(hue, saturation: sat, brightness: bri, alpha: alp)
+        
+        let color = UIColor.init(hue: hue.pointee, saturation: sat.pointee, brightness: bri.pointee, alpha: alpha)
+        
+        return color;
+    }
 }

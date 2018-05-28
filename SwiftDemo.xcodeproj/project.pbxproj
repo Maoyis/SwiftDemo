@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4204CDB820BBEC51008B7A94 /* XYMarkerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4204CDB520BBEC51008B7A94 /* XYMarkerView.swift */; };
+		4204CDB920BBEC51008B7A94 /* BalloonMarker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4204CDB620BBEC51008B7A94 /* BalloonMarker.swift */; };
+		4204CDBA20BBEC51008B7A94 /* RadarMarkerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4204CDB720BBEC51008B7A94 /* RadarMarkerView.swift */; };
+		4204CDBE20BBF0D6008B7A94 /* RadarMarkerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4204CDBD20BBF0D6008B7A94 /* RadarMarkerView.xib */; };
+		4259728820B64B0C00201E31 /* LineVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4259728720B64B0C00201E31 /* LineVC.swift */; };
+		4259728A20B6502A00201E31 /* ChartsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4259728920B6502A00201E31 /* ChartsVC.swift */; };
+		4259728D20B68FB100201E31 /* QXDateFormtter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4259728C20B68FB100201E31 /* QXDateFormtter.swift */; };
 		425FF78220AED4C100AB97A7 /* Charts.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 425FF78120AED4C100AB97A7 /* Charts.storyboard */; };
 		425FF78420AED77500AB97A7 /* ChartsHomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 425FF78320AED77500AB97A7 /* ChartsHomeVC.swift */; };
 		42818C6020A42ECB00F7D0CD /* Beginner.html in Resources */ = {isa = PBXBuildFile; fileRef = 42818C5F20A42ECB00F7D0CD /* Beginner.html */; };
@@ -58,6 +65,13 @@
 
 /* Begin PBXFileReference section */
 		02DD2DE39D9C3058C9484465 /* Pods_SwiftDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4204CDB520BBEC51008B7A94 /* XYMarkerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XYMarkerView.swift; sourceTree = "<group>"; };
+		4204CDB620BBEC51008B7A94 /* BalloonMarker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BalloonMarker.swift; sourceTree = "<group>"; };
+		4204CDB720BBEC51008B7A94 /* RadarMarkerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RadarMarkerView.swift; sourceTree = "<group>"; };
+		4204CDBD20BBF0D6008B7A94 /* RadarMarkerView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RadarMarkerView.xib; sourceTree = "<group>"; };
+		4259728720B64B0C00201E31 /* LineVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineVC.swift; sourceTree = "<group>"; };
+		4259728920B6502A00201E31 /* ChartsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartsVC.swift; sourceTree = "<group>"; };
+		4259728C20B68FB100201E31 /* QXDateFormtter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QXDateFormtter.swift; sourceTree = "<group>"; };
 		425FF78120AED4C100AB97A7 /* Charts.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Charts.storyboard; sourceTree = "<group>"; };
 		425FF78320AED77500AB97A7 /* ChartsHomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartsHomeVC.swift; sourceTree = "<group>"; };
 		42818C5F20A42ECB00F7D0CD /* Beginner.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = Beginner.html; sourceTree = "<group>"; };
@@ -135,6 +149,25 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		4204CDB420BBEC51008B7A94 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				4204CDB520BBEC51008B7A94 /* XYMarkerView.swift */,
+				4204CDB620BBEC51008B7A94 /* BalloonMarker.swift */,
+				4204CDB720BBEC51008B7A94 /* RadarMarkerView.swift */,
+				4204CDBD20BBF0D6008B7A94 /* RadarMarkerView.xib */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		4259728B20B68C7900201E31 /* Formatter */ = {
+			isa = PBXGroup;
+			children = (
+				4259728C20B68FB100201E31 /* QXDateFormtter.swift */,
+			);
+			path = Formatter;
+			sourceTree = "<group>";
+		};
 		425FF77920AED35300AB97A7 /* Sub */ = {
 			isa = PBXGroup;
 			children = (
@@ -153,6 +186,8 @@
 		425FF77E20AED43000AB97A7 /* Charts */ = {
 			isa = PBXGroup;
 			children = (
+				4204CDB420BBEC51008B7A94 /* Components */,
+				4259728B20B68C7900201E31 /* Formatter */,
 				425FF77F20AED43000AB97A7 /* VC */,
 				425FF78020AED43000AB97A7 /* View */,
 				425FF78120AED4C100AB97A7 /* Charts.storyboard */,
@@ -164,6 +199,8 @@
 			isa = PBXGroup;
 			children = (
 				425FF78320AED77500AB97A7 /* ChartsHomeVC.swift */,
+				4259728920B6502A00201E31 /* ChartsVC.swift */,
+				4259728720B64B0C00201E31 /* LineVC.swift */,
 			);
 			path = VC;
 			sourceTree = "<group>";
@@ -578,6 +615,7 @@
 				42B357CF209410F400474893 /* Main.storyboard in Resources */,
 				42818C6020A42ECB00F7D0CD /* Beginner.html in Resources */,
 				42FAADE820A023BF00D5EADB /* advance.plist in Resources */,
+				4204CDBE20BBF0D6008B7A94 /* RadarMarkerView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -646,17 +684,23 @@
 			buildActionMask = 2147483647;
 			files = (
 				42EFA62020AA7B5500EB588B /* QXListVC.swift in Sources */,
+				4259728D20B68FB100201E31 /* QXDateFormtter.swift in Sources */,
 				42B35829209464AF00474893 /* CourseModel.swift in Sources */,
 				42B3580920941A5500474893 /* RootVC.swift in Sources */,
 				42B35807209419B600474893 /* BaseTabBarVC.swift in Sources */,
 				425FF78420AED77500AB97A7 /* ChartsHomeVC.swift in Sources */,
+				4204CDB920BBEC51008B7A94 /* BalloonMarker.swift in Sources */,
 				42818C6620A533AE00F7D0CD /* MenuHeader.swift in Sources */,
+				4204CDB820BBEC51008B7A94 /* XYMarkerView.swift in Sources */,
 				42B35820209420D600474893 /* LeftVC.swift in Sources */,
 				42B358052094196200474893 /* BaseNav.swift in Sources */,
 				42ABB7AA20A2F47000F9D7FE /* TextVC.swift in Sources */,
 				42B357CA209410F400474893 /* AppDelegate.swift in Sources */,
+				4259728820B64B0C00201E31 /* LineVC.swift in Sources */,
 				42B358232094233500474893 /* UIColor+ThemeColor.swift in Sources */,
 				42B3582520944D8700474893 /* AdvancedHome.swift in Sources */,
+				4259728A20B6502A00201E31 /* ChartsVC.swift in Sources */,
+				4204CDBA20BBEC51008B7A94 /* RadarMarkerView.swift in Sources */,
 				42B3581E20941D9000474893 /* BeginnerHome.swift in Sources */,
 				42ABB7AD20A2F49800F9D7FE /* QXWebVC.swift in Sources */,
 				42B358272094631200474893 /* LibraryHome.swift in Sources */,

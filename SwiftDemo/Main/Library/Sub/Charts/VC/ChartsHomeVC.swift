@@ -11,7 +11,7 @@ import UIKit
 class ChartsHomeVC: BaseVC, UITableViewDelegate, UITableViewDataSource {
 
     @IBOutlet weak var table: UITableView!
-    var data:Array<String> = ["简介", "饼状图"]
+    var data:Array<String> = ["简介", "折线图", "饼状图"]
     override func viewDidLoad() {
         super.viewDidLoad()
         self.registerCell()
@@ -55,8 +55,25 @@ class ChartsHomeVC: BaseVC, UITableViewDelegate, UITableViewDataSource {
     //MARK:---点击相应动作
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+        if indexPath.row == 0 {
+            
+            
+            return
+        }
         //具体操作
-
+        var identy = "LineVC"
+        switch indexPath.row {
+        case 1:
+            identy = "LineVC"
+        default: break
+            
+        }
+        
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: identy)
+        
+        self.navigationController?.pushViewController(vc!, animated: true)
+        
+        
     }
     
 

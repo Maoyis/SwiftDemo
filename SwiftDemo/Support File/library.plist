@@ -8,6 +8,10 @@
 			<dict>
 				<key>title</key>
 				<string>swift简介</string>
+				<key>type</key>
+				<string>2</string>
+				<key>data</key>
+				<string>https://github.com/danielgindi/Charts</string>
 			</dict>
 		</array>
 	</dict>
