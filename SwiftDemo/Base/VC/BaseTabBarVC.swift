@@ -41,4 +41,24 @@ class BaseTabBarVC: UITabBarController {
             }
         }
     }
+    
+    override open var shouldAutorotate: Bool {
+        get {
+            return true
+            
+        }
+    }
+
+    override open var supportedInterfaceOrientations: UIInterfaceOrientationMask{
+        get {
+            let nav = self.selectedViewController
+
+            if nav != nil && ((nav as! UINavigationController).visibleViewController?.isKind(of: LineVC.classForCoder()))!{
+                return UIInterfaceOrientationMask.landscapeLeft
+            }
+            return UIInterfaceOrientationMask.portrait
+        }
+    }
+    
+ 
 }

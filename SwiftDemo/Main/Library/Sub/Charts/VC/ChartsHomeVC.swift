@@ -71,10 +71,22 @@ class ChartsHomeVC: BaseVC, UITableViewDelegate, UITableViewDataSource {
         
         let vc = self.storyboard?.instantiateViewController(withIdentifier: identy)
         
+        //self.present(vc!, animated: true, completion: nil)
         self.navigationController?.pushViewController(vc!, animated: true)
         
         
     }
-    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        //私有方法调用需要谨慎-不能直接调用
+        //UIDevice.current.setValue(UIInterfaceOrientation.portrait.rawValue, forKey: "orientation")
+        if UIDevice.current.orientation == .portrait{
+             UIDevice.current.setValue(UIInterfaceOrientation.portraitUpsideDown.rawValue, forKey: "orientation")
+        }else{
+             UIDevice.current.setValue(UIInterfaceOrientation.portrait.rawValue, forKey: "orientation")
+        }
+       
+    }
+
 
 }

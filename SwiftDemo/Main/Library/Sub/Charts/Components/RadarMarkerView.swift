@@ -52,4 +52,7 @@ public class RadarMarkerView: MarkerView {
     {
          self.removeFromSuperview()
     }
+
+
+   
 }

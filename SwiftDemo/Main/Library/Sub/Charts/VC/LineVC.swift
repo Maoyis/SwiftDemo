@@ -209,4 +209,16 @@ class LineVC: ChartsVC, IFillFormatter{
     override func chartValueNothingSelected(_ chartView: ChartViewBase) {
         print("取消选中响应")
     }
+    
+    
+    
+    
+    
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        //私有方法调用需要谨慎-不能直接调用
+        UIDevice.current.setValue(UIInterfaceOrientation.landscapeLeft.rawValue, forKey: "orientation")
+    }
+
 }
