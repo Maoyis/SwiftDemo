@@ -24,13 +24,13 @@
 		<array>
 			<dict>
 				<key>title</key>
-				<string>多线程</string>
+				<string>日历</string>
 				<key>type</key>
 				<integer>4</integer>
 			</dict>
 			<dict>
 				<key>title</key>
-				<string>日历</string>
+				<string>多线程</string>
 				<key>type</key>
 				<integer>4</integer>
 				<key>data</key>
@@ -76,6 +76,14 @@
 						<string></string>
 					</dict>
 				</array>
+			</dict>
+			<dict>
+				<key>title</key>
+				<string>蓝牙</string>
+				<key>type</key>
+				<string>0</string>
+				<key>data</key>
+				<string>Bluetooth</string>
 			</dict>
 		</array>
 	</dict>

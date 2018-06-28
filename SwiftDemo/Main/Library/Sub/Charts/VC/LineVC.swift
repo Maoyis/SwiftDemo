@@ -11,7 +11,6 @@ import Charts
 class LineVC: ChartsVC, IFillFormatter{
     
     
-
     @IBOutlet weak var lineView: LineChartView!
     
     
@@ -196,8 +195,8 @@ class LineVC: ChartsVC, IFillFormatter{
         return set1
     }
     func getFillLinePosition(dataSet: ILineChartDataSet, dataProvider: LineChartDataProvider) -> CGFloat {
-        
-        return 0
+
+        return 0;
     }
     
     
