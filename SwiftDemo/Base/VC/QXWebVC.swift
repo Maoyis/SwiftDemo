@@ -18,12 +18,7 @@ import WebKit
     2、与UIWebView相比较，拥有更快的加载速度和性能，更低的内存占用。
  缺点：
     WKWebView的请求不能被NSURLProtocol截获（对我们的demo无影响）
- 
-
  */
-
-
-
 class QXWebVC: BaseVC,  WKNavigationDelegate, WKUIDelegate{
     
     let progressH = 1.5
