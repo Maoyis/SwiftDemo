@@ -50,13 +50,15 @@ class QXWebVC: BaseVC,  WKNavigationDelegate, WKUIDelegate{
             let request = NSURLRequest.init(url: url!)
             self.web.load(request as URLRequest)
         }
-        
         self.view.addSubview(self.web)
         self.web.addSubview(self.progressView)
         self.addProgressObsever()
-        
+   
     }
-
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.web.frame = self.view.bounds
+    }
     func addProgressObsever() {
         self.web.addObserverBlock(forKeyPath: "estimatedProgress") { (obj, old, new) in
             let width = self.view.bounds.size.width
@@ -84,7 +86,7 @@ class QXWebVC: BaseVC,  WKNavigationDelegate, WKUIDelegate{
     func webView(_ webView: WKWebView, decidePolicyFor navigationAction: WKNavigationAction, decisionHandler: @escaping (WKNavigationActionPolicy) -> Void) {
         //必须设置该回调
         decisionHandler(WKNavigationActionPolicy.allow)
-        debugPrint("1.在发送请求之前，决定是否跳转的代理")
+        log("1.在发送请求之前，决定是否跳转的代理")
     }
     
     ///2. 这个代理方法表示当客户端收到服务器的响应头，根据response相关信息，可以决定这次跳转是否可以继续进行。
@@ -92,15 +94,15 @@ class QXWebVC: BaseVC,  WKNavigationDelegate, WKUIDelegate{
     func webView(_ webView: WKWebView, decidePolicyFor navigationResponse: WKNavigationResponse, decisionHandler: @escaping (WKNavigationResponsePolicy) -> Void) {
         //必须设置该回调
         decisionHandler(WKNavigationResponsePolicy.allow)
-        debugPrint("2.在收到响应后，决定是否跳转的代理")
+        log("2.在收到响应后，决定是否跳转的代理")
     }
     ///3. 当开始为主框架加载数据时发生错误。
     func webView(_ webView: WKWebView, didFailProvisionalNavigation navigation: WKNavigation!, withError error: Error) {
-        debugPrint("3.当开始为主框架加载数据时发生错误。")
+        log("3.当开始为主框架加载数据时发生错误。")
     }
     ///4. 需要身份验证时调用
     func webView(_ webView: WKWebView, didReceive challenge: URLAuthenticationChallenge, completionHandler: @escaping (URLSession.AuthChallengeDisposition, URLCredential?) -> Void) {
-         debugPrint("4. 需要身份验证时调用")
+         log("4. 需要身份验证时调用")
         // 判断是否是信任服务器证书
         if (challenge.protectionSpace.authenticationMethod == NSURLAuthenticationMethodServerTrust) {
             //先前失败的身份验证尝试的计数为0则信任
@@ -127,33 +129,35 @@ class QXWebVC: BaseVC,  WKNavigationDelegate, WKUIDelegate{
 
     ///5. 准备加载页面。等同于UIWebViewDelegate: - webView:shouldStartLoadWithRequest:navigationType
     func webView(_ webView: WKWebView, didStartProvisionalNavigation navigation: WKNavigation!) {
-        debugPrint("5. 准备加载页面")
+        log("5. 准备加载页面")
     }
     ///6. 内容开始加载. 等同于UIWebViewDelegate: - webViewDidStartLoad:
     func webView(_ webView: WKWebView, didCommit navigation: WKNavigation!) {
-        debugPrint("6. 内容开始加载.")
+        log("6. 内容开始加载.")
     }
     ///7. 页面加载失败。 等同于UIWebViewDelegate: - webView:didFailLoadWithError:
     func webView(_ webView: WKWebView, didFail navigation: WKNavigation!, withError error: Error) {
-        debugPrint("7. 页面加载失败")
+        log("7. 页面加载失败")
     }
     ///8. 这个代理是服务器redirect时调用
     ///接收到服务器跳转请求的代理
     func webView(_ webView: WKWebView, didReceiveServerRedirectForProvisionalNavigation navigation: WKNavigation!) {
-        debugPrint("8.服务器发生redirect")
+        log("8.服务器发生redirect")
     }
     ///9. 页面加载完成。 等同于UIWebViewDelegate: - webViewDidFinishLoad:
     func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
-        debugPrint("9. 页面加载完成。")
+        log("9. 页面加载完成。")
     }
     
     ///10. 当webview的web内容进程终止时调用。
     func webViewWebContentProcessDidTerminate(_ webView: WKWebView) {
-        debugPrint("10. 当webview的web内容进程终止时调用。")
+        log("10. 当webview的web内容进程终止时调用。")
     }
     
    
-    
+    func log(_ msg:String)  {
+        //debugPrint(msg)
+    }
     
    
    
