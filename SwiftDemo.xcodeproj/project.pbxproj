@@ -11,6 +11,7 @@
 		4204CDB920BBEC51008B7A94 /* BalloonMarker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4204CDB620BBEC51008B7A94 /* BalloonMarker.swift */; };
 		4204CDBA20BBEC51008B7A94 /* RadarMarkerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4204CDB720BBEC51008B7A94 /* RadarMarkerView.swift */; };
 		4204CDBE20BBF0D6008B7A94 /* RadarMarkerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4204CDBD20BBF0D6008B7A94 /* RadarMarkerView.xib */; };
+		425892BC22B7933D00D8B9BC /* Company.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 425892BB22B7933D00D8B9BC /* Company.gpx */; };
 		4259728820B64B0C00201E31 /* LineVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4259728720B64B0C00201E31 /* LineVC.swift */; };
 		4259728A20B6502A00201E31 /* ChartsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4259728920B6502A00201E31 /* ChartsVC.swift */; };
 		4259728D20B68FB100201E31 /* QXDateFormtter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4259728C20B68FB100201E31 /* QXDateFormtter.swift */; };
@@ -75,6 +76,7 @@
 		4204CDB620BBEC51008B7A94 /* BalloonMarker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BalloonMarker.swift; sourceTree = "<group>"; };
 		4204CDB720BBEC51008B7A94 /* RadarMarkerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RadarMarkerView.swift; sourceTree = "<group>"; };
 		4204CDBD20BBF0D6008B7A94 /* RadarMarkerView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RadarMarkerView.xib; sourceTree = "<group>"; };
+		425892BB22B7933D00D8B9BC /* Company.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Company.gpx; sourceTree = "<group>"; };
 		4259728720B64B0C00201E31 /* LineVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineVC.swift; sourceTree = "<group>"; };
 		4259728920B6502A00201E31 /* ChartsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartsVC.swift; sourceTree = "<group>"; };
 		4259728C20B68FB100201E31 /* QXDateFormtter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QXDateFormtter.swift; sourceTree = "<group>"; };
@@ -522,6 +524,7 @@
 		42B3582C209466BD00474893 /* Support File */ = {
 			isa = PBXGroup;
 			children = (
+				425892BB22B7933D00D8B9BC /* Company.gpx */,
 				42B35831209466DF00474893 /* Localizable.strings */,
 				42FAADE620A023BF00D5EADB /* advance.plist */,
 				42FAADE720A023BF00D5EADB /* library.plist */,
@@ -668,6 +671,7 @@
 				42B3582F209466DF00474893 /* Localizable.strings in Resources */,
 				4283A2D420A423E400B3BBEC /* beginner.plist in Resources */,
 				42B357D1209410F900474893 /* Assets.xcassets in Resources */,
+				425892BC22B7933D00D8B9BC /* Company.gpx in Resources */,
 				42B357CF209410F400474893 /* Main.storyboard in Resources */,
 				42818C6020A42ECB00F7D0CD /* Beginner.html in Resources */,
 				42FAADE820A023BF00D5EADB /* advance.plist in Resources */,
@@ -961,14 +965,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 829EBU26GY;
+				DEVELOPMENT_TEAM = JB4XMV6A4V;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/SwiftDemo/Support File/PrefixHeader.pch";
 				INFOPLIST_FILE = SwiftDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.lanyi.www.SwiftDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.lanyi.www.-ENote";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -981,14 +985,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 829EBU26GY;
+				DEVELOPMENT_TEAM = JB4XMV6A4V;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/SwiftDemo/Support File/PrefixHeader.pch";
 				INFOPLIST_FILE = SwiftDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.lanyi.www.SwiftDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.lanyi.www.-ENote";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
