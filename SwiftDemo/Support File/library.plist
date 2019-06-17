@@ -3,7 +3,7 @@
 <plist version="1.0">
 <array>
 	<dict>
-		<key>常用</key>
+		<key>Chats</key>
 		<array>
 			<dict>
 				<key>title</key>
@@ -13,20 +13,19 @@
 				<key>data</key>
 				<string>https://github.com/danielgindi/Charts</string>
 			</dict>
-		</array>
-	</dict>
-	<dict>
-		<key>功能</key>
-		<array>
 			<dict>
 				<key>title</key>
-				<string>Charts</string>
+				<string>详情</string>
 				<key>type</key>
 				<string>0</string>
 				<key>data</key>
 				<string>Charts</string>
 			</dict>
 		</array>
+	</dict>
+	<dict>
+		<key>功能</key>
+		<array/>
 	</dict>
 </array>
 </plist>

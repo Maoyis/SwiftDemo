@@ -50,18 +50,9 @@ class BaseVC: UIViewController {
         let cstB = UIButton.init(type: UIButtonType.custom)
         cstB.addTarget(self, action: action, for: UIControlEvents.touchUpInside)
         // 设置图片 设置尺寸--》等于当前背景图片的尺寸。
-        cstB.setImage(UIImage.init(named: image), for: UIControlState.normal)
+        cstB.setImage(UIImage.init(named: image)?.byTintColor(UIColor.app_333333), for: UIControlState.normal)
         cstB.frame =  CGRect(x: 0, y: 0, width: 30, height: 30)
-        //cstB.imageEdgeInsets = UIEdgeInsetsMake(0, -30, 0, 0);
-        //适配xocde9 xcode9导航栏按钮使用自约束
-        /**
-         方法1-
-         let systemVersion = UIDevice.current.systemVersion
-         Double(systemVersion)! > 9.0
-         当版本未x.x.x时 Double(systemVersion)为nil，会引发catch
-         方法二：
-         #available(iOS 9.0, macOS 10,*)
-         */
+        cstB.contentHorizontalAlignment = .left
         if  #available(iOS 9.0, *) {
             let wc = cstB.widthAnchor.constraint(equalToConstant: cstB.frame.size.width)
             wc.isActive = true;

@@ -14,6 +14,8 @@ class BaseTabBarVC: UITabBarController {
         super.viewDidLoad()
         self.initTab()
         self.selectedIndex = 1
+        
+        UITabBarItem.appearance().setTitleTextAttributes([.font : UIFont.systemFont(ofSize: 20)], for: .normal)
     }
     
     override func didReceiveMemoryWarning() {
@@ -40,6 +42,7 @@ class BaseTabBarVC: UITabBarController {
                 
             }
         }
+        
     }
     
     override open var shouldAutorotate: Bool {

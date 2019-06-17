@@ -36,6 +36,7 @@ class QXWebVC: BaseVC,  WKNavigationDelegate, WKUIDelegate{
     lazy var web: WKWebView = {
         let web = WKWebView.init(frame: self.view.bounds)
         web.navigationDelegate = self
+        web.backgroundColor = UIColor.init(rgba: 0xf0f0f0ff)
         //web.uiDelegate         = self
         return web
     }()
