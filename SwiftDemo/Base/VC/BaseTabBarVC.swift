@@ -15,7 +15,7 @@ class BaseTabBarVC: UITabBarController {
         self.initTab()
         self.selectedIndex = 1
         
-        UITabBarItem.appearance().setTitleTextAttributes([.font : UIFont.systemFont(ofSize: 20)], for: .normal)
+        UITabBarItem.appearance().setTitleTextAttributes([.font : UIFont.systemFont(ofSize: 18)], for: .normal)
     }
     
     override func didReceiveMemoryWarning() {
