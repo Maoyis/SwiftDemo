@@ -93,6 +93,8 @@ class QXListVC: BaseVC,UITableViewDelegate, UITableViewDataSource{
         /// html
         case ShowWay.html:
             self.gotoHTML(withModel: model)
+        case .framework:
+            self.gotoFramework(withModel: model)
         }
     }
     //MARK:----对应类型跳转处理
@@ -105,6 +107,13 @@ class QXListVC: BaseVC,UITableViewDelegate, UITableViewDataSource{
     func gotoWeb(withModel model:CourseModel) -> Void {
         let web = QXWebVC()
         web.data = model.data as! String
+        web.title = model.title
+        self.gotoCourseVC(widthVC: web)
+    }
+    func gotoFramework(withModel model:CourseModel) -> Void {
+        let web = QXWebVC()
+        web.data = "https://developer.apple.com/documentation/" +  model.title
+        web.isHTML = false
         web.title = model.title
         self.gotoCourseVC(widthVC: web)
     }

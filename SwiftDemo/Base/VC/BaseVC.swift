@@ -84,8 +84,11 @@ class BaseVC: UIViewController {
             type = CourseType.Begnner
         case 1:
             type = CourseType.Advanced
-        default:
+        case 2:
             type = CourseType.Library
+        case 3:
+            type = CourseType.Framework
+        default:break
         }
         return type
     }

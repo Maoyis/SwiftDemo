@@ -50,6 +50,7 @@
 		42EFA62320AAD91A00EB588B /* 线程.html in Resources */ = {isa = PBXBuildFile; fileRef = 42EFA62220AAD91A00EB588B /* 线程.html */; };
 		42FAADE820A023BF00D5EADB /* advance.plist in Resources */ = {isa = PBXBuildFile; fileRef = 42FAADE620A023BF00D5EADB /* advance.plist */; };
 		42FAADE920A023BF00D5EADB /* library.plist in Resources */ = {isa = PBXBuildFile; fileRef = 42FAADE720A023BF00D5EADB /* library.plist */; };
+		559B9E0022BBE0CB006CD323 /* Framework.plist in Resources */ = {isa = PBXBuildFile; fileRef = 559B9DFF22BBE0CB006CD323 /* Framework.plist */; };
 		B522CD717BAB56DC51B9DC78 /* Pods_SwiftDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02DD2DE39D9C3058C9484465 /* Pods_SwiftDemo.framework */; };
 /* End PBXBuildFile section */
 
@@ -125,6 +126,8 @@
 		42EFA62220AAD91A00EB588B /* 线程.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "线程.html"; sourceTree = "<group>"; };
 		42FAADE620A023BF00D5EADB /* advance.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = advance.plist; sourceTree = "<group>"; };
 		42FAADE720A023BF00D5EADB /* library.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = library.plist; sourceTree = "<group>"; };
+		559B9DFB22BBD799006CD323 /* Network.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Network.framework; path = System/Library/Frameworks/Network.framework; sourceTree = SDKROOT; };
+		559B9DFF22BBE0CB006CD323 /* Framework.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Framework.plist; sourceTree = "<group>"; };
 		95C8F655674BB2B07842FC73 /* Pods-SwiftDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftDemo/Pods-SwiftDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		DD39112F6772041066759504 /* Pods-SwiftDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftDemo/Pods-SwiftDemo.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -158,6 +161,7 @@
 		2EB147BBEFA6104FDEBA7467 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				559B9DFB22BBD799006CD323 /* Network.framework */,
 				02DD2DE39D9C3058C9484465 /* Pods_SwiftDemo.framework */,
 			);
 			name = Frameworks;
@@ -375,6 +379,7 @@
 				42B3581120941D1900474893 /* Advanced */,
 				42B3581520941D1900474893 /* Library */,
 				42B3581920941D1900474893 /* Beginner */,
+				559B9DFA22BBB84F006CD323 /* Framework */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -413,6 +418,7 @@
 		42B3581120941D1900474893 /* Advanced */ = {
 			isa = PBXGroup;
 			children = (
+				42FAADE620A023BF00D5EADB /* advance.plist */,
 				425FF77920AED35300AB97A7 /* Sub */,
 				42EFA62220AAD91A00EB588B /* 线程.html */,
 				42EFA62120AAD90F00EB588B /* Sources */,
@@ -448,6 +454,7 @@
 		42B3581520941D1900474893 /* Library */ = {
 			isa = PBXGroup;
 			children = (
+				42FAADE720A023BF00D5EADB /* library.plist */,
 				425FF77D20AED43000AB97A7 /* Sub */,
 				42B3581620941D1900474893 /* VC */,
 				42B3581720941D1900474893 /* Model */,
@@ -481,6 +488,7 @@
 		42B3581920941D1900474893 /* Beginner */ = {
 			isa = PBXGroup;
 			children = (
+				4283A2D620A423E400B3BBEC /* beginner.plist */,
 				42818C5F20A42ECB00F7D0CD /* Beginner.html */,
 				42B3581A20941D1900474893 /* VC */,
 				42B3581B20941D1900474893 /* Model */,
@@ -526,9 +534,6 @@
 			children = (
 				425892BB22B7933D00D8B9BC /* Company.gpx */,
 				42B35831209466DF00474893 /* Localizable.strings */,
-				42FAADE620A023BF00D5EADB /* advance.plist */,
-				42FAADE720A023BF00D5EADB /* library.plist */,
-				4283A2D620A423E400B3BBEC /* beginner.plist */,
 				4283A2D320A4200A00B3BBEC /* PrefixHeader.pch */,
 			);
 			path = "Support File";
@@ -539,6 +544,14 @@
 			children = (
 			);
 			path = Sources;
+			sourceTree = "<group>";
+		};
+		559B9DFA22BBB84F006CD323 /* Framework */ = {
+			isa = PBXGroup;
+			children = (
+				559B9DFF22BBE0CB006CD323 /* Framework.plist */,
+			);
+			path = Framework;
 			sourceTree = "<group>";
 		};
 		73A7F192DF61251549406408 /* Pods */ = {
@@ -675,6 +688,7 @@
 				42B357CF209410F400474893 /* Main.storyboard in Resources */,
 				42818C6020A42ECB00F7D0CD /* Beginner.html in Resources */,
 				42FAADE820A023BF00D5EADB /* advance.plist in Resources */,
+				559B9E0022BBE0CB006CD323 /* Framework.plist in Resources */,
 				4204CDBE20BBF0D6008B7A94 /* RadarMarkerView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

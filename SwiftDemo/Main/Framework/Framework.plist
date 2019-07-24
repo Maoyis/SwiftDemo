@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>触摸层</key>
+		<array>
+			<dict>
+				<key>title</key>
+				<string>UIKit</string>
+				<key>type</key>
+				<integer>6</integer>
+				<key>data</key>
+				<string>https://developer.apple.com/documentation/uikit</string>
+			</dict>
+		</array>
+	</dict>
+	<dict>
+		<key>媒体层</key>
+		<array>
+			<dict>
+				<key>title</key>
+				<string>Photos</string>
+				<key>type</key>
+				<integer>6</integer>
+				<key>data</key>
+				<string>QXLabelVC</string>
+			</dict>
+		</array>
+	</dict>
+	<dict>
+		<key>服务层</key>
+		<array>
+			<dict>
+				<key>title</key>
+				<string>Accounts</string>
+				<key>type</key>
+				<integer>6</integer>
+				<key>data</key>
+				<string>QXLabelVC</string>
+			</dict>
+		</array>
+	</dict>
+	<dict>
+		<key>系统层</key>
+		<array>
+			<dict>
+				<key>title</key>
+				<string>Accelerate</string>
+				<key>type</key>
+				<integer>6</integer>
+				<key>data</key>
+				<string>QXLabelVC</string>
+			</dict>
+		</array>
+	</dict>
+</array>
+</plist>

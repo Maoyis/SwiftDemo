@@ -151,6 +151,9 @@ class LeftVC: BaseVC ,UITableViewDelegate, UITableViewDataSource{
         /// html
         case ShowWay.html:
             self.gotoHTML(withModel: model)
+        /// framework
+        case ShowWay.framework:
+            self.gotoFramework(withModel: model)
         }
     }
     //MARK:----对应类型跳转处理
@@ -161,6 +164,13 @@ class LeftVC: BaseVC ,UITableViewDelegate, UITableViewDataSource{
     }
     func gotoXib(withModel model:CourseModel) -> Void {
 
+    }
+    func gotoFramework(withModel model:CourseModel) -> Void {
+        let web = QXWebVC()
+        web.data = "https://developer.apple.com/documentation/" +  model.title
+        web.isHTML = false
+        web.title = model.title
+        self.gotoCourseVC(widthVC: web)
     }
     func gotoWeb(withModel model:CourseModel) -> Void {
         let web = QXWebVC()

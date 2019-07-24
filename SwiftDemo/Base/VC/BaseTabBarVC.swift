@@ -38,6 +38,8 @@ class BaseTabBarVC: UITabBarController {
                 vc.title = NSLocalizedString("进阶", comment: "Advanced")
             case 3:
                 vc.title = NSLocalizedString("精品库", comment: "Library")
+            case 4:
+                vc.title = NSLocalizedString("框架", comment: "Framework")
             default: break
                 
             }

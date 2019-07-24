@@ -15,14 +15,14 @@ enum CourseType {
     case Begnner
     case Advanced
     case Library
+    case Framework
   
 }
 
 @objc(ShowWay)
 enum ShowWay : Int{
-
     /// storyboard
-    case board
+    case board = 0
     /// xib
     case xib
     /// webView
@@ -33,6 +33,8 @@ enum ShowWay : Int{
     case list
     /// webView
     case html
+    ///系统框架-webview
+    case framework
 }
 
 class CourseModel: NSObject {
@@ -93,6 +95,8 @@ class CourseModel: NSObject {
             return self.getAdvanceCourses()
         case CourseType.Library:
             return self.getLibraryCourses()
+        case CourseType.Framework:
+            return self.getFrameworkCourses()
 
         }
     }
@@ -110,4 +114,7 @@ class CourseModel: NSObject {
         return self.getCourseData(withFile: "library")
     }
     
+    class func getFrameworkCourses() -> Array<Dictionary<String, Array<CourseModel>>> {
+        return self.getCourseData(withFile: "Framework")
+    }
 }
